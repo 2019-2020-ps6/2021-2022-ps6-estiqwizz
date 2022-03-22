@@ -1,1 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:wght@700&display=swap');
+
+.menu {
+  display: flex;
+  justify-content: center;
+  margin: 1em;
+}
+
+button {
+  border: #3C53F4 solid 3px;
+  border-radius: 100px;
+  font-family: 'Inria Sans', sans-serif;
+  color: #3C53F4;
+  background-color: white;
+  transition: all .5s;
+  box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12);
+}
+
+button:hover {
+  border: white solid 3px;
+  background-color: #3C53F4;
+  color: white;
+}
+
+.play {
+  font-size: 4em;
+  padding: 0.5em 1.5em;
+}
+
 
