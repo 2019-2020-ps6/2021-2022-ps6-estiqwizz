@@ -12,6 +12,7 @@ import { AppRoutingModule } from './app.routing.module';
 import { QuestionListComponent } from './questions/question-list/question-list.component';
 import { QuestionFormComponent } from './questions/question-form/question-form.component';
 import { QuestionComponent } from './questions/question/question.component';
+import { HomeComponent } from "./home/home.component";
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
@@ -24,7 +25,8 @@ import { HttpClientModule } from '@angular/common/http';
     EditQuizComponent,
     QuestionListComponent,
     QuestionFormComponent,
-    QuestionComponent
+    QuestionComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
