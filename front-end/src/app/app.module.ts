@@ -13,6 +13,7 @@ import { QuestionListComponent } from './questions/question-list/question-list.c
 import { QuestionFormComponent } from './questions/question-form/question-form.component';
 import { QuestionComponent } from './questions/question/question.component';
 import { HomeComponent } from './home/home.component';
+import { ParametreComponent } from './parametre/parametre.component';
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
@@ -26,7 +27,8 @@ import { HttpClientModule } from '@angular/common/http';
     QuestionListComponent,
     QuestionFormComponent,
     QuestionComponent,
-    HomeComponent
+    HomeComponent,
+    ParametreComponent
   ],
   imports: [
     BrowserModule,
