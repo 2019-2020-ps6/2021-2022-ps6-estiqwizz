@@ -11,9 +11,29 @@
 }
 
 .header {
-  background: $blue;
+  background: #3C53F4;
+  display: flex;
   padding: 0.5em;
   box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12);
+}
+
+h1 {
   font-family: 'Inria Sans', sans-serif;
-  font-size: 50px;
+  margin: 0.3em;
+  font-size: 3em;
+  transition: text-shadow 0.2s;
+}
+
+h1:hover {
+  text-shadow: #000 1px 0 10px;
+}
+
+a {
+  text-decoration: none;
+  color: whitesmoke;
+}
+
+/* selected link */
+a:active {
+  color: lightgray;
 }
