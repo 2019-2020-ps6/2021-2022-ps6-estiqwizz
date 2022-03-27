@@ -6,4 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./parametre.component.css']
 })
 export class ParametreComponent {
+
+  public LIST_DALTO: string[] = ['Normal', 'Deutéranopie', 'Protanopie', 'Tritanopie'];
+
+  public LIST_ECRITURE: string[] = ['Normal', 'Grand'];
+
+  public LIST_SEPARATION: string[] = ['Normal', 'Grand'];
+
+  public LIST_IMAGE: string[] = ['Avec', 'Sans'];
+
 }

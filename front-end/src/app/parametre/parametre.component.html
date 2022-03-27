@@ -1,10 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
   <meta charset="UTF-8">
   <title>Parametre</title>
 </head>
 <body>
-    <p> ceci est le parametre </p>
+  <h1 id="paramTitre"><b>Parametre du Site</b></h1>
+  <div class="preference-D">
+
+    <label for="daltonisme"> Daltonisme :</label>
+    <input list="daltonisme-type" id="daltonisme" name="daltonisme-choice" />
+    <datalist id="daltonisme-type">
+      <option *ngFor="let thematique of LIST_DALTO" [value]="thematique">
+        {{thematique}}
+      </option>
+    </datalist>
+
+    <label for="taille-Ecriture"> Taille d'ecriture :</label>
+    <input list="Ecriture-type" id="taille-Ecriture" name="Ecriture-choice" />
+    <datalist id="Ecriture-type">
+      <option *ngFor="let thematique of LIST_ECRITURE" [value]="thematique">
+        {{thematique}}
+      </option>
+    </datalist>
+
+    <label for="separation-element"> Separation des Elements :</label>
+    <input list="separation-type" id="separation-element" name="separation-choice" />
+    <datalist id="separation-type">
+      <option *ngFor="let thematique of LIST_SEPARATION" [value]="thematique">
+        {{thematique}}
+      </option>
+    </datalist>
+
+    <label for="activer-image"> Activer les Images :</label>
+    <input list="activation-type" id="activer-image" name="activation-choice" />
+    <datalist id="activation-type">
+      <option *ngFor="let thematique of LIST_IMAGE" [value]="thematique">
+        {{thematique}}
+      </option>
+    </datalist>
+  </div>
 </body>
 </html>
