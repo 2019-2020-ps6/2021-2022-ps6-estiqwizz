@@ -13,15 +13,16 @@
 .header {
   background: #3C53F4;
   display: flex;
-  padding: 0.5em;
   box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12);
+  justify-content: space-between;
+  padding: 15px;
 }
 
 h1 {
   font-family: 'Inria Sans', sans-serif;
-  margin: 0.3em;
   font-size: 3em;
   transition: text-shadow 0.2s;
+  margin: 0px;
 }
 
 h1:hover {
@@ -36,4 +37,32 @@ a {
 /* selected link */
 a:active {
   color: lightgray;
+}
+
+button {
+  display: inline-flex;
+  border-radius: 100px;
+  font-family: 'Inria Sans', sans-serif;
+  transition: all .5s;
+  box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12);
+  background-color: white;
+}
+
+.parametre {
+  padding: 0.5em;
+  font-size: 1.5em;
+  color: #0e1b79;
+  border: #0e1b79 solid 3px;
+}
+
+.parametre:hover {
+  border: white solid 3px;
+  background-color: #0e1b79;
+  color: white;
+}
+
+.ico {
+  margin-right: 10px;
+  display: inline-flex;
+  align-items: center;
 }
