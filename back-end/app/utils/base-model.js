@@ -12,7 +12,7 @@ module.exports = class BaseModel {
     this.schema = Joi.object().keys({ ...schema, id: Joi.number().required() })
     this.items = []
     this.name = name
-    this.filePath = `${__dirname}/../../mocks/${this.name.toLowerCase()}.mocks.json`
+    this.filePath = `${__dirname}/../../database/${this.name.toLowerCase()}.data.json`
     this.load()
   }
 

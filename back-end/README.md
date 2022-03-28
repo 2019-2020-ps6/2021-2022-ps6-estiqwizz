@@ -1,16 +1,21 @@
 # NodeJS Back-End Starter
 
+## Postman collection
+
+In back-end folder of this repository, you will find a postman collection called `PS6.postman_collection.json`. 
+
+It contains all the requests to manipulate your API. You just need to `import` it in your postman to use it.
+
 ## Install & Run
 
 1) Install [NodeJS Installer](https://nodejs.org/en/download/) (you should already have NodeJS since it was a dependency of the Front-End)
-2) Clone your repository `git clone https://github.com/PATH_TO_YOUR_BACK_END_REPOSITORY.git`
+2) Fork the repository and clone your new repository `git clone https://github.com/PATH_TO_YOUR_BACK_END_REPOSITORY.git`
 3) install the dependencies `npm install`
-4) Run the application `npm start`
+4) Run the application `npm run dev`
 
 ## Development
 
 During the development process, you should use `npm run dev` to have livereload each time you modify a file in `app` folder.
-
 
 ## Run the linter
 
