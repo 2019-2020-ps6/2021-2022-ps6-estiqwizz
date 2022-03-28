@@ -2,7 +2,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { IonicModule } from '@ionic/angular';
 import { AppRoutingModule } from './app.routing.module';
 
 import { AppComponent } from './app.component';
@@ -39,7 +38,6 @@ import { GuideListComponent } from './guide/guide-list/guide-list.component';
     ReactiveFormsModule,
     AppRoutingModule,
     HttpClientModule,
-    IonicModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]
