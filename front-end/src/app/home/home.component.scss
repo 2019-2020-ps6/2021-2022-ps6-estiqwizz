@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Inria+Sans:wght@700&display=swap');
 
-
+.title {
+  display: flex;
+}
 
 .menu {
   display: flex;
@@ -14,8 +16,14 @@ button {
   border-radius: 100px;
   font-family: 'Inria Sans', sans-serif;
   transition: all .5s;
-  box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12);
+  //box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12);
   background-color: white;
+}
+
+button:hover {
+  border: white solid 3px;
+  color: white;
+  box-shadow: black 1px 0 20px;
 }
 
 .play {
@@ -26,9 +34,7 @@ button {
 }
 
 .play:hover{
-  border: white solid 3px;
   background-color: #3C53F4;
-  color: white;
 }
 
 .parametre {
@@ -39,9 +45,7 @@ button {
 }
 
 .parametre:hover {
-  border: white solid 3px;
   background-color: #0e1b79;
-  color: white;
 }
 
 .guide {
@@ -52,13 +56,23 @@ button {
 }
 
 .guide:hover {
-  border: white solid 3px;
   background-color: #464646;
-  color: white;
 }
 
 .ico {
   margin-right: 10px;
   display: inline-flex;
   align-items: center;
+}
+
+h1 {
+  font-family: 'Inria Sans', sans-serif;
+  font-size: 9em;
+  transition: all 0.2s;
+  margin: 0px;
+  color:#3C53F4;
+}
+
+h1:hover {
+  transform: scale(1.2, 1.1);
 }

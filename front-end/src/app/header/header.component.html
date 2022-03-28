@@ -1,13 +1,22 @@
+
+
 <div class="header">
-  <div>
+
+  <div class="homepart">
+    <button [routerLink]="['/home']">
+      <ion-icon name="home-outline"></ion-icon>
+    </button>
+    <div class = "vertical"></div>
     <a [routerLink]="['/home']"><h1>EstiQwizz</h1></a>
   </div>
+
   <div>
-    <button class="parametre" [routerLink]="['/parametre']">
-      <span class="ion ion-md-attach ico">
+    <button [routerLink]="['/parametre']">
+      <span class="ion ion-md-attach icobutton">
           <ion-icon name="settings-outline"></ion-icon>
       </span>
       <span>PARAMÈTRES</span>
-  </button>
+    </button>
   </div>
+
 </div>

@@ -18,25 +18,31 @@
   padding: 15px;
 }
 
+.vertical {
+  border-left: 2px solid white;
+  border-radius: 1px;
+  height: 100%;
+  margin-inline: 10px;
+}
+
 h1 {
   font-family: 'Inria Sans', sans-serif;
   font-size: 3em;
   transition: text-shadow 0.2s;
   margin: 0px;
+  color:white;
 }
 
 h1:hover {
   text-shadow: #000 1px 0 10px;
 }
 
-a {
-  text-decoration: none;
-  color: whitesmoke;
+h1:active {
+  color: lightgray;
 }
 
-/* selected link */
-a:active {
-  color: lightgray;
+a {
+  text-decoration: none;
 }
 
 button {
@@ -44,25 +50,26 @@ button {
   border-radius: 100px;
   font-family: 'Inria Sans', sans-serif;
   transition: all .5s;
-  box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12);
-  background-color: white;
-}
-
-.parametre {
+  color: #0e1b79;
   padding: 0.5em;
   font-size: 1.5em;
-  color: #0e1b79;
   border: #0e1b79 solid 3px;
 }
 
-.parametre:hover {
+button:hover {
   border: white solid 3px;
   background-color: #0e1b79;
+  box-shadow: black 1px 0 20px;
   color: white;
 }
 
-.ico {
+.icobutton {
   margin-right: 10px;
   display: inline-flex;
+  align-items: center;
+}
+
+.homepart {
+  display: flex;
   align-items: center;
 }
