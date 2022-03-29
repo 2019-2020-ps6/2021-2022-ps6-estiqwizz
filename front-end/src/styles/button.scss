@@ -72,6 +72,18 @@
     padding: 0.4em 0.65em;
 }
 
+.quizbutton {
+    color: black;
+    border-radius: 10px;
+    border: $light-blue solid 3px;
+}
+
+.quizbutton:hover {
+    color: black;
+    border-radius: 10px;
+    border: $light-blue solid 3px;
+}
+
 .ico {
     margin-right: 10px;
     display: inline-flex;
