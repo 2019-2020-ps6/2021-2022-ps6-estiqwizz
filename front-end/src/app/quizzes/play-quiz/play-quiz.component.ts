@@ -25,9 +25,9 @@ export class PlayQuizComponent implements OnInit {
   ngOnInit() {
     const id = this.route.snapshot.paramMap.get('id');
     this.quizService.setSelectedQuiz(id);
-    this.nbQuestions = this.quiz.questions.length;    
+    this.nbQuestions = this.quiz.questions.length;
     console.log(this.nbQuestions);
-    
+
   }
 
   suivant(isCorrect: boolean) {
