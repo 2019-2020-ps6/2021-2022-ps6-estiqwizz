@@ -6,6 +6,7 @@ import { EditQuizComponent } from './quizzes/edit-quiz/edit-quiz.component';
 import { HomeComponent } from './home/home.component';
 import { ParametreComponent } from './parametre/parametre.component';
 import { GuideListComponent } from './guide/guide-list/guide-list.component';
+import { PlayQuizComponent } from './quizzes/play-quiz/play-quiz.component';
 
 const routes: Routes = [
     {path: 'quiz-list', component: QuizListComponent},
@@ -13,6 +14,7 @@ const routes: Routes = [
     {path: 'home', component: HomeComponent},
     {path: 'parametre', component: ParametreComponent},
     {path: 'guide-list', component: GuideListComponent},
+    {path: 'play-quiz/:id', component: PlayQuizComponent},
     {path: '**', redirectTo: 'home', pathMatch: 'full' },
 ];
 
