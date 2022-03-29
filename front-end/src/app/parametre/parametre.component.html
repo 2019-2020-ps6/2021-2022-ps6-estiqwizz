@@ -2,7 +2,7 @@
 <h1 id="paramTitre"><b>Parametre du Site</b></h1>
 <div>
   <div class="parametre">
-    <label for="daltonisme"> Daltonisme :</label>
+    <label for="daltonisme"> Daltonisme : </label>
     <input list="daltonisme-type" id="daltonisme" name="daltonisme-choice" />
     <datalist id="daltonisme-type">
       <option *ngFor="let thematique of LIST_DALTO" [value]="thematique">
@@ -12,7 +12,7 @@
   </div>
   
   <div class="parametre">
-    <label for="taille-Ecriture"> Taille d'ecriture :</label>
+    <label for="taille-Ecriture"> Taille d'écriture : </label>
     <input list="Ecriture-type" id="taille-Ecriture" name="Ecriture-choice" />
     <datalist id="Ecriture-type">
       <option *ngFor="let thematique of LIST_ECRITURE" [value]="thematique">
@@ -22,7 +22,7 @@
   </div>
 
   <div class="parametre">
-    <label for="separation-element"> Separation des Elements :</label>
+    <label for="separation-element"> Séparation des éléments : </label>
     <input list="separation-type" id="separation-element" name="separation-choice" />
     <datalist id="separation-type">
       <option *ngFor="let thematique of LIST_SEPARATION" [value]="thematique">
@@ -32,7 +32,7 @@
   </div>
 
   <div class="parametre">
-    <label for="activer-image"> Activer les Images :</label>
+    <label for="activer-image"> Activer les images : </label>
     <input list="activation-type" id="activer-image" name="activation-choice" />
     <datalist id="activation-type">
       <option *ngFor="let thematique of LIST_IMAGE" [value]="thematique">
