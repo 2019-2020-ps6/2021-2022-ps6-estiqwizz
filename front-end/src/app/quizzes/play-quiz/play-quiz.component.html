@@ -1,3 +1,7 @@
+<button class="button back" [routerLink]="['/quiz-list']">
+    <i class="fas fa-angle-left"></i>
+</button>
+
 <ng-container *ngIf="quiz">
     <h2>Nom du quiz : {{quiz.name}}</h2>
 </ng-container>

@@ -1,4 +1,6 @@
-<button class="button-card" routerLink="/quiz-list">Back</button>
+<button class="button back" [routerLink]="['/quiz-list']">
+    <i class="fas fa-angle-left"></i>
+</button>
 
 <ng-container *ngIf="quiz">
     <h2>{{quiz.name}}</h2>
