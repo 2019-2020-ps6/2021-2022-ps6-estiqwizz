@@ -6,6 +6,7 @@ import { EditQuizComponent } from './quizzes/edit-quiz/edit-quiz.component';
 import { HomeComponent } from './home/home.component';
 import { ParametreComponent } from './parametre/parametre.component';
 import { GuideListComponent } from './guide/guide-list/guide-list.component';
+import { QuizFormComponent } from './quizzes/quiz-form/quiz-form.component';
 import { PlayQuizComponent } from './quizzes/play-quiz/play-quiz.component';
 import { ResultQuizComponent } from './quizzes/result-quiz/result-quiz.component';
 
@@ -14,6 +15,7 @@ const routes: Routes = [
     {path: 'edit-quiz/:id', component: EditQuizComponent},
     {path: 'home', component: HomeComponent},
     {path: 'parametre', component: ParametreComponent},
+    {path: 'quiz-form', component: QuizFormComponent},
     {path: 'guide-list', component: GuideListComponent},
     {path: 'play-quiz/:id', component: PlayQuizComponent},
     {path: 'result-quiz/:id', component: ResultQuizComponent},
