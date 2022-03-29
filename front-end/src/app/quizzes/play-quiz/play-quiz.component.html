@@ -10,6 +10,8 @@
 </div>
 
 <div *ngIf="end">
-    <h2>Votre Score :</h2>
+    <h3>Votre Score :</h3>
     <p>Score : {{score}} / {{quiz.questions.length}}</p>
+    <button routerLink="/">Retour à l'accueil</button>
+    <button routerLink="/quiz-list">Rejouer à un quiz</button>
 </div>
