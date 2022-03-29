@@ -17,6 +17,7 @@ import { HomeComponent } from './home/home.component';
 import { ParametreComponent } from './parametre/parametre.component';
 import { GuideListComponent } from './guide/guide-list/guide-list.component';
 import { PlayQuizComponent } from './quizzes/play-quiz/play-quiz.component';
+import { ResultQuizComponent } from './quizzes/result-quiz/result-quiz.component';
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import { PlayQuizComponent } from './quizzes/play-quiz/play-quiz.component';
     HomeComponent,
     ParametreComponent,
     GuideListComponent,
-    PlayQuizComponent
+    PlayQuizComponent,
+    ResultQuizComponent
   ],
   imports: [
     BrowserModule,

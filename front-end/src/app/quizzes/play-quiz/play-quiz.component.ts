@@ -14,6 +14,9 @@ export class PlayQuizComponent implements OnInit {
   public quiz: Quiz;
 
   public i = 0;
+  public score = 0;
+  public nbQuestions: number;
+  public end = false;
 
   constructor(private route: ActivatedRoute, private quizService: QuizService) {
     this.quizService.quizSelected$.subscribe((quiz) => this.quiz = quiz);
@@ -22,10 +25,15 @@ export class PlayQuizComponent implements OnInit {
   ngOnInit() {
     const id = this.route.snapshot.paramMap.get('id');
     this.quizService.setSelectedQuiz(id);
+    this.nbQuestions = this.quiz.questions.length;    
+    console.log(this.nbQuestions);
+    
   }
 
-  suivant() {
+  suivant(isCorrect: boolean) {
     this.i++;
+    if (isCorrect) this.score++;
+    if (this.i == this.quiz.questions.length-1) this.end = true;
   }
 
 }
