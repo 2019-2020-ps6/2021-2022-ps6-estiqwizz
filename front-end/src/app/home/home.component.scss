@@ -55,6 +55,17 @@ button:hover {
   background-color: #464646;
 }
 
+.creation {
+  font-size: 2em;
+  padding: 0.5em 0.5em;
+  color: #3C53F4;
+  border: #3C53F4 solid 3px;
+}
+
+.creation:hover {
+  background-color: #3C53F4;
+}
+
 .ico {
   margin-right: 10px;
   display: inline-flex;
