@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:wght@700&display=swap');
+@import "./variables";
+
+.link {
+    text-decoration: none;
+}
+
+.button {
+    display: inline-flex;
+    margin: 0.1em;
+    border-radius: 100px;
+    font-family: 'Inria Sans', sans-serif;
+    transition: all .5s;
+    cursor: pointer;
+    background-color: white;
+    padding: 0.5em 1.5em;
+    justify-content: center;
+}
+  
+.button:hover {
+    border: white solid 3px;
+    color: white;
+    box-shadow: black 1px 0 20px;
+}
+
+.play {
+    font-size: 3em*$text-size;
+    color: #3C53F4;
+    border: #3C53F4 solid 3px;
+}
+
+.play:hover{
+    background-color: #3C53F4;
+}
+
+.create {
+    font-size: 2em*$text-size;
+    color: #3C53F4;
+    border: #3C53F4 solid 3px;
+}
+
+.create:hover{
+    background-color: #3C53F4;
+}
+
+.setting {
+    font-size: 1.5em*$text-size;
+    color: #0e1b79;
+    border: #0e1b79 solid 3px;
+}
+  
+.setting:hover {
+    background-color: #0e1b79;
+}
+
+.guide {
+    font-size: 1em*$text-size;
+    color: #464646;
+    border: #464646 solid 3px;
+}
+  
+.guide:hover {
+    background-color: #464646;
+}
+
+.header {
+
+}
+
+.ico {
+    margin-right: 10px;
+    display: inline-flex;
+    align-items: center;
+}

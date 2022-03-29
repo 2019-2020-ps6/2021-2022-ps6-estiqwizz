@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:wght@700&display=swap');
+@import '../../styles/button.scss';
+@import '../../styles/variables.scss';
 
 .menu {
   display: flex;
@@ -6,80 +7,8 @@
   align-items: center;
 }
 
-button {
-  display: inline-flex;
-  margin: 0.1em;
-  border-radius: 100px;
-  font-family: 'Inria Sans', sans-serif;
-  transition: all .5s;
-  cursor: pointer;
-  background-color: white;
-}
-
-button:hover {
-  border: white solid 3px;
-  color: white;
-  box-shadow: black 1px 0 20px;
-}
-
-.play {
-  font-size: 4em;
-  padding: 0.5em 1.5em;
-  color: #3C53F4;
-  border: #3C53F4 solid 3px;
-}
-
-.play:hover{
-  background-color: #3C53F4;
-}
-
-.parametre {
-  padding: 0.5em;
-  font-size: 2.5em;
-  color: #0e1b79;
-  border: #0e1b79 solid 3px;
-}
-
-.parametre:hover {
-  background-color: #0e1b79;
-}
-
-.guide {
-  padding: 0.3em;
-  font-size: 1.5em;
-  color: #464646;
-  border: #464646 solid 3px;
-}
-
-.guide:hover {
-  background-color: #464646;
-}
-
-.creation {
-  font-size: 2em;
-  padding: 0.5em 0.5em;
-  color: #3C53F4;
-  border: #3C53F4 solid 3px;
-}
-
-.creation:hover {
-  background-color: #3C53F4;
-}
-
-.ico {
-  margin-right: 10px;
-  display: inline-flex;
-  align-items: center;
-}
-
-h1 {
-  font-family: 'Inria Sans', sans-serif;
-  font-size: 9em;
-  transition: all 0.2s;
-  margin: 0px;
-  color:#3C53F4;
-}
-
-h1:hover {
-  transform: scale(1.2, 1.1);
+hr {
+  color: $blue;
+  border: $blue dashed 3px;
+  width: 40%;
 }

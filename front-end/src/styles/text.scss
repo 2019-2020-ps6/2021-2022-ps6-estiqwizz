@@ -1,0 +1,21 @@
+@import "./variables.scss";
+@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:wght@700&display=swap');
+
+h1 {
+    font-family: 'Inria Sans', sans-serif;
+    font-size: 3em*$text-size;
+    margin: 0px;
+}
+
+.title {
+    transition: text-shadow 0.2s;
+    color:white;
+}
+  
+.title:hover {
+    text-shadow: #000 1px 0 10px;
+}
+  
+.title:active {
+    color: lightgray;
+}

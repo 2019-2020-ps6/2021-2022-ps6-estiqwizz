@@ -1,23 +1,25 @@
 <div class="menu">
     <div>
-        <button class="play" [routerLink]="['/quiz-list']">
+        <button class="button play" [routerLink]="['/quiz-list']">
             <span><i class="fas fa-play ico"></i></span>
             <span>JOUER</span>
         </button>
     </div>
     <div>
-        <button class="creation" [routerLink]="['/quiz-form']">
-            <span>Créer quiz</span>
+        <button class="button create" [routerLink]="['/quiz-form']">
+            <span><i class="fas fa-plus ico"></i></span>
+            <span>CRÉER</span>
         </button>
     </div>
+    <hr>
     <div>
-        <button class="parametre" [routerLink]="['/parametre']">
+        <button class="button setting" [routerLink]="['/parametre']">
             <span><i class="fas fa-wrench ico"></i></span>
             <span>PARAMÈTRES</span>
         </button>
     </div>
     <div>
-        <button class="guide" [routerLink]="['/guide-list']">
+        <button class="button guide" [routerLink]="['/guide-list']">
             <span><i class="fas fa-question ico"></i></span>
             <span>Guide d'utilisation</span>
         </button>
