@@ -31,7 +31,7 @@ router.post('/', (req, res) => {
     // Check if quizId exists, if not it will throw a NotFoundError
     Quiz.getById(req.params.quizId)
     const quizId = parseInt(req.params.quizId, 10)
-    let question = Question.create({ label: req.body.label, quizId })
+    let question = Question.create({ label: req.body.label, explanation: req.body.explanation, quizId })
     // If answers have been provided in the request, we create the answer and update the response to send.
     if (req.body.answers && req.body.answers.length > 0) {
       const answers = req.body.answers.map((answer) => Answer.create({ ...answer, questionId: question.id }))
@@ -46,7 +46,7 @@ router.post('/', (req, res) => {
 router.put('/:questionId', (req, res) => {
   try {
     const question = getQuestionFromQuiz(req.params.quizId, req.params.questionId)
-    const updatedQuestion = Question.update(req.params.questionId, { label: req.body.label, quizId: question.quizId })
+    const updatedQuestion = Question.update(req.params.questionId, { label: req.body.label, explanation: req.body.explanation, quizId: question.quizId })
     res.status(200).json(updatedQuestion)
   } catch (err) {
     manageAllErrors(res, err)

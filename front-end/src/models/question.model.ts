@@ -7,5 +7,6 @@ export interface Answer {
 export interface Question {
     id: string;
     label: string;
+    explanation?: string;
     answers: Answer[];
 }

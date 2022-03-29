@@ -63,6 +63,7 @@ export class QuizService {
   }
 
   addQuestion(quiz: Quiz, question: Question) {
+    // alert('SUCCESS!! :-)\n\n' + JSON.stringify(question, null, 4));
     const questionUrl = this.quizUrl + '/' + quiz.id + '/' + this.questionsPath;
     this.http.post<Question>(questionUrl, question, this.httpOptions).subscribe(() => this.setSelectedQuiz(quiz.id));
   }

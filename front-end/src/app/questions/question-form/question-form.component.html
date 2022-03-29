@@ -1,9 +1,14 @@
 <div class="card">
-  <h2>Create a new question</h2>
+  <h2>Cree une nouvelle question</h2>
   <form class="quiz-form" [formGroup]="questionForm">
     <label for="label">
       Title <br>
       <input class="input-custom" type="text" id="label" [formControlName]="'label'">
+    </label>
+    <br>
+    <label for="explanation">
+      Explication de reponse <br>
+      <textarea class="input-custom" id="explanation" [formControlName]="'explanation'"> Explication ... </textarea>
     </label>
     <br>
     <button class="button-card" (click)="addAnswer()">Add Answer</button>

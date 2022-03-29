@@ -24,6 +24,7 @@ export class QuestionFormComponent implements OnInit {
   private initializeQuestionForm() {
     this.questionForm = this.formBuilder.group({
       label: ['', Validators.required],
+      explanation: ['', Validators.required],
       answers: this.formBuilder.array([])
     });
   }
@@ -51,6 +52,7 @@ export class QuestionFormComponent implements OnInit {
       const question = this.questionForm.getRawValue() as Question;
       this.quizService.addQuestion(this.quiz, question);
       this.initializeQuestionForm();
+      alert('SUCCESS!! :-)\n\n' + JSON.stringify(question, null, 4));
     }
   }
 }
