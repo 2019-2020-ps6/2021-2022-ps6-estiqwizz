@@ -154,5 +154,65 @@
     "isCorrect": true,
     "questionId": 1648500657670,
     "id": 1648500657674
+  },
+  {
+    "value": "Ruy",
+    "isCorrect": false,
+    "questionId": 1648541697860,
+    "id": 1648541697862
+  },
+  {
+    "value": "Chun-Li",
+    "isCorrect": false,
+    "questionId": 1648541697860,
+    "id": 1648541697863
+  },
+  {
+    "value": "Ruy",
+    "isCorrect": false,
+    "questionId": 1648541738099,
+    "id": 1648541738100
+  },
+  {
+    "value": "Chun-Li",
+    "isCorrect": false,
+    "questionId": 1648541738099,
+    "id": 1648541738100
+  },
+  {
+    "value": "Vega",
+    "isCorrect": true,
+    "questionId": 1648541738099,
+    "id": 1648541738101
+  },
+  {
+    "value": "Benoit",
+    "isCorrect": false,
+    "questionId": 1648541738099,
+    "id": 1648541738102
+  },
+  {
+    "value": "Peach",
+    "isCorrect": true,
+    "questionId": 1648542177744,
+    "id": 1648542177746
+  },
+  {
+    "value": "Daisy",
+    "isCorrect": false,
+    "questionId": 1648542177744,
+    "id": 1648542177747
+  },
+  {
+    "value": "Luigi",
+    "isCorrect": false,
+    "questionId": 1648542177744,
+    "id": 1648542177748
+  },
+  {
+    "value": "Boo",
+    "isCorrect": false,
+    "questionId": 1648542177744,
+    "id": 1648542177749
   }
 ]
