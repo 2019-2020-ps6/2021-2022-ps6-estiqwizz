@@ -13,6 +13,8 @@ export class PlayQuizComponent implements OnInit {
 
   public quiz: Quiz;
 
+  public i = 0;
+
   constructor(private route: ActivatedRoute, private quizService: QuizService) {
     this.quizService.quizSelected$.subscribe((quiz) => this.quiz = quiz);
    }
@@ -20,6 +22,10 @@ export class PlayQuizComponent implements OnInit {
   ngOnInit() {
     const id = this.route.snapshot.paramMap.get('id');
     this.quizService.setSelectedQuiz(id);
+  }
+
+  suivant() {
+    this.i++;
   }
 
 }

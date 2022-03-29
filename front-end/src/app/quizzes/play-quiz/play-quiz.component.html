@@ -1,7 +1,7 @@
 <ng-container *ngIf="quiz">
     <h2>Nom du quiz : {{quiz.name}}</h2>
 </ng-container>
-{{quiz.questions[0].label}}
-<div *ngFor="let answer of quiz.questions[0].answers">
-    {{answer.value}}
+{{quiz.questions[i].label}}
+<div *ngFor="let answer of quiz.questions[i].answers">
+    <button class="button-card" (click)="suivant()">{{answer.value}}</button>
 </div>
