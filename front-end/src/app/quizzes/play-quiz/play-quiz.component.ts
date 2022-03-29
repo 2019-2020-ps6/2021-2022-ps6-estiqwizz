@@ -20,20 +20,19 @@ export class PlayQuizComponent implements OnInit {
 
   constructor(private route: ActivatedRoute, private quizService: QuizService) {
     this.quizService.quizSelected$.subscribe((quiz) => this.quiz = quiz);
-   }
+  }
 
   ngOnInit() {
     const id = this.route.snapshot.paramMap.get('id');
     this.quizService.setSelectedQuiz(id);
-    this.nbQuestions = this.quiz.questions.length;    
+    this.nbQuestions = this.quiz.questions.length;
     console.log(this.nbQuestions);
-    
+
   }
 
   suivant(isCorrect: boolean) {
     this.i++;
-    if (isCorrect) this.score++;
-    if (this.i == this.quiz.questions.length) this.end = true;
+    if (isCorrect) { this.score++; }
+    if (this.i === this.quiz.questions.length - 1) { this.end = true; }
   }
-
 }
