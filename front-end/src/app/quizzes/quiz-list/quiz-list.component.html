@@ -1,11 +1,27 @@
 <!--<app-quiz-form></app-quiz-form>-->
-<button class="button back" [routerLink]="['/home']">
-    <i class="fas fa-angle-left"></i>
-</button>
-<div class="quiz-list">
-    <div class="quiz" *ngFor="let quiz of quizList">
-        <!--Inputs & Output allow communication between parent & child components.-->
-        <!--More information: https://angular.io/guide/component-interaction-->
-        <app-quiz [quiz]="quiz" (quizSelected)="quizSelected($event)" (deleteQuiz)="deleteQuiz($event)" (editQuiz)="editQuiz($event)"></app-quiz>
+<div class="contentquizpage">
+    <div>
+        <button class="button back" [routerLink]="['/home']">
+            <i class="fas fa-angle-left"></i>
+        </button>
+    </div>
+    <div class="quiz-list">
+        <h2>Les quiz officiels</h2>
+        <hr>
+        <div class="officialquiz" *ngFor="let quiz of quizList">
+            <!--Inputs & Output allow communication between parent & child components.-->
+            <!--More information: https://angular.io/guide/component-interaction-->
+            <app-quiz [quiz]="quiz" (quizSelected)="quizSelected($event)" (deleteQuiz)="deleteQuiz($event)" (editQuiz)="editQuiz($event)"></app-quiz>
+        </div>
+        <hr style="color: white; border: none;">
+        <h2>Les quiz de la communauté</h2>
+        <hr>
+        <div *ngFor="let quiz of quizList">
+            <!--Inputs & Output allow communication between parent & child components.-->
+            <!--More information: https://angular.io/guide/component-interaction-->
+            <app-quiz [quiz]="quiz" (quizSelected)="quizSelected($event)" (deleteQuiz)="deleteQuiz($event)" (editQuiz)="editQuiz($event)"></app-quiz>
+        </div>
+    </div>
+    <div>
     </div>
 </div>

@@ -74,8 +74,11 @@
 
 .quizbutton {
     color: black;
+    font-size: .8em*$text-size;
     border-radius: 10px;
     border: $light-blue solid 3px;
+    margin: 10px;
+    width: 250px*$text-size;
 }
 
 .quizbutton:hover {
