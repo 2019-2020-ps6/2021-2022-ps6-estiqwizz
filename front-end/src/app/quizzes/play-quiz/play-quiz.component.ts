@@ -32,8 +32,8 @@ export class PlayQuizComponent implements OnInit {
 
   suivant(isCorrect: boolean) {
     this.i++;
-    if (isCorrect) this.score++;
-    if (this.i == this.quiz.questions.length-1) this.end = true;
+    if (isCorrect) { this.score++; }
+    if (this.i === this.quiz.questions.length - 1) { this.end = true; }
   }
 
 }

@@ -19,7 +19,7 @@ export class ResultQuizComponent implements OnInit {
    ngOnInit() {
     const id = this.route.snapshot.paramMap.get('id');
     this.quizService.setSelectedQuiz(id);
-    
+
   }
 
 }
