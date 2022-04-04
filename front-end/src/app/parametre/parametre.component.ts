@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {FormGroup, FormBuilder} from '@angular/forms';
 
 @Component({
   selector: 'app-parametre',
@@ -13,6 +14,17 @@ export class ParametreComponent {
 
   public LIST_SEPARATION: string[] = ['Normal', 'Grand'];
 
-  public LIST_IMAGE: string[] = ['Avec', 'Sans'];
+  public tailleForm: FormGroup;
+  public sepForm: FormGroup;
+  public daltForm: FormGroup;
 
+  constructor(public formBuilder: FormBuilder) {
+    this.daltForm = this.formBuilder.group({ choix: ['Normal'] });
+    this.tailleForm = this.formBuilder.group({ choix: ['Normal'] });
+    this.sepForm = this.formBuilder.group({ choix: ['Normal'] });
+  }
+
+  setDalto() {}
+  setTaille() {}
+  setSep() {}
 }
