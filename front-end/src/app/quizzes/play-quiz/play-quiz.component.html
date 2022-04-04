@@ -1,21 +1,29 @@
-<button class="button back" [routerLink]="['/quiz-list']">
-    <i class="fas fa-angle-left"></i>
-</button>
 
-<ng-container *ngIf="quiz">
-    <h2>Nom du quiz : {{quiz.name}}</h2>
-</ng-container>
-
-<div *ngIf="!end" >
-    <p>{{quiz.questions[i].label}}</p>
-    <div *ngFor="let answer of quiz.questions[i].answers">
-        <button class="button-card" (click)="suivant(answer.isCorrect)">{{answer.value}}</button>
+<!--<app-quiz-form></app-quiz-form>-->
+<div class="contentquizpage">
+    <div>
+        <button class="button back" [routerLink]="['/quiz-list']">
+            <i class="fas fa-angle-left"></i>
+        </button>
+    </div>
+    <div class="game">
+        <div>
+            <h2>Quiz : {{quiz.name}}</h2>
+        </div>
+        <hr>
+        <h3>{{quiz.questions[i].label}}</h3>
+        <hr>
+        <div *ngIf="!end" class="questionsparent">
+            <div *ngFor="let answer of quiz.questions[i].answers" class="questions">
+                <button class="answerbutton" (click)="suivant(answer.isCorrect)">{{answer.value}}</button>
+            </div>
+        </div>
+        <div *ngIf="end">
+            <h3>Votre Score :</h3>
+            <p>Score : {{score}} / {{quiz.questions.length}}</p>
+            <button routerLink="/">Retour à l'accueil</button>
+            <button routerLink="/quiz-list">Rejouer à un quiz</button>
+        </div>
     </div>
 </div>
 
-<div *ngIf="end">
-    <h3>Votre Score :</h3>
-    <p>Score : {{score}} / {{quiz.questions.length}}</p>
-    <button routerLink="/">Retour à l'accueil</button>
-    <button routerLink="/quiz-list">Rejouer à un quiz</button>
-</div>

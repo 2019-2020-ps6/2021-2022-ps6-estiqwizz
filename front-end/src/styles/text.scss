@@ -13,6 +13,12 @@ h2 {
     margin: 20px*$text-size;
 }
 
+h3 {
+    font-family: 'Inria Sans', sans-serif;
+    font-size: 1em*$text-size;
+    margin: 20px*$text-size;
+}
+
 .title {
     transition: text-shadow 0.2s;
     color:white;
