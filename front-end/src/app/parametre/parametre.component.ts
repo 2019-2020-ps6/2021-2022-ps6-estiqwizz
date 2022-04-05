@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {FormGroup, FormBuilder} from '@angular/forms';
+import {ParamService} from '../../services/parametre.service';
 
 @Component({
   selector: 'app-parametre',
@@ -20,7 +21,7 @@ export class ParametreComponent {
 
   public textBig = false;
 
-  constructor(public formBuilder: FormBuilder) {
+  constructor(public formBuilder: FormBuilder, public paramService: ParamService) {
     this.daltForm = this.formBuilder.group({ choix: ['Normal'] });
     this.tailleForm = this.formBuilder.group({ choix: ['Normal'] });
     this.sepForm = this.formBuilder.group({ choix: ['Normal'] });
@@ -32,10 +33,11 @@ export class ParametreComponent {
     const choixTaille = this.tailleForm.getRawValue();
     console.log('clique a ete fait' , choixTaille);
     this.textBig = choixTaille.choix !== 'Normal';
+    this.paramService.setTaille(this.textBig);
   }
 
   getTaille() {
-    return {parametre1: !this.textBig , parametre2: this.textBig};
+    return this.paramService.getTaille();
   }
   setSep() {}
 }

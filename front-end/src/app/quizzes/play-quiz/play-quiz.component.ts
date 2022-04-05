@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Quiz } from 'src/models/quiz.model';
 import { QuizService } from 'src/services/quiz.service';
 import { Question } from '../../../models/question.model';
+import {ParamService} from '../../../services/parametre.service';
 
 @Component({
   selector: 'app-play-quiz',
@@ -18,7 +19,7 @@ export class PlayQuizComponent implements OnInit {
   public nbQuestions: number;
   public end = false;
 
-  constructor(private route: ActivatedRoute, private quizService: QuizService) {
+  constructor(private route: ActivatedRoute, private quizService: QuizService, public paramService: ParamService) {
     this.quizService.quizSelected$.subscribe((quiz) => this.quiz = quiz);
   }
 

@@ -4,7 +4,7 @@
             <i class="fas fa-angle-left"></i>
         </button>
     </div>
-    <div class="game">
+    <div class="game" [ngClass]="paramService.getTaille()">
         <div>
             <h2>Quiz : {{quiz.name}}</h2>
         </div>
