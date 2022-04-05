@@ -9,11 +9,29 @@
             <h2>Quiz : {{quiz.name}}</h2>
         </div>
         <hr>
-        <h3>{{quiz.questions[i].label}}</h3>
-        <hr>
         <div *ngIf="!end" class="questionsparent">
-            <div *ngFor="let answer of quiz.questions[i].answers" class="questions">
-                <button class="answerbutton" (click)="suivant(answer.isCorrect)">{{answer.value}}</button>
+            <h3>{{quiz.questions[i].label}}</h3>
+            <hr>
+            <div *ngIf="!explanation">
+                <div *ngFor="let answer of quiz.questions[i].answers" class="questions">
+                    <button class="answerbutton" (click)="displayExplanation(answer.isCorrect)">{{answer.value}}</button>
+                </div>
+            </div>
+            <div *ngIf="explanation">
+                <div *ngIf="isCorrectCurrentQuestion" class="goodAnswer">
+                    <h3>Bonne réponse !</h3>
+                    <p class="goodAnswerBorder">{{quiz.questions[i].explanation}}</p>
+                </div>
+                <div *ngIf="!isCorrectCurrentQuestion" class="badAnswer">
+                    <h3>Mauvaise réponse... </h3>
+                    <p class="badAnswerBorder">{{quiz.questions[i].explanation}}</p>
+                </div>
+                <button class="button nextButton" (click)="suivant()">
+                    <span>
+                        <i class="fas fa-angle-right"></i>  
+                    </span>
+                    <span>ㅤSuivant</span>
+                </button>
             </div>
         </div>
         <div *ngIf="end">

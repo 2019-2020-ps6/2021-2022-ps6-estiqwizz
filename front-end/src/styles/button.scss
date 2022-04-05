@@ -118,6 +118,15 @@
     box-shadow: black 1px 0 20px;
 }
 
+.nextButton {
+    margin-top: 20px;
+    font-size: $text-size*1.4em;
+    background-color: $dark-blue;
+    color: white;
+    border: white solid 3px;
+    padding: 0.4em 0.65em;
+}
+
 .endquiz {
     font-size: 0.8em*$text-size;
     color: $light-blue;
