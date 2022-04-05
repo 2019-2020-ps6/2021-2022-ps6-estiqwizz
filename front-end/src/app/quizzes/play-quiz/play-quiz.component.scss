@@ -59,3 +59,10 @@ hr {
     border-color: $green;
     border-radius: 20px;
 }
+
+.score {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+}
