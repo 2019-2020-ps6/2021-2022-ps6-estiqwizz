@@ -9,10 +9,10 @@
             <h2>Quiz : {{quiz.name}}</h2>
         </div>
         <hr>
-        <div *ngIf="!end" class="questionsparent">
+        <div *ngIf="!end">
             <h3>{{quiz.questions[i].label}}</h3>
             <hr>
-            <div *ngIf="!explanation">
+            <div *ngIf="!explanation" class="questionsparent">
                 <div *ngFor="let answer of quiz.questions[i].answers" class="questions">
                     <button class="answerbutton" (click)="displayExplanation(answer.isCorrect)">{{answer.value}}</button>
                 </div>
