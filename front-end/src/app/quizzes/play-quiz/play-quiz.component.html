@@ -1,5 +1,3 @@
-
-<!--<app-quiz-form></app-quiz-form>-->
 <div class="contentquizpage">
     <div>
         <button class="button back" [routerLink]="['/quiz-list']">
@@ -20,9 +18,10 @@
         </div>
         <div *ngIf="end">
             <h3>Votre Score :</h3>
-            <p>Score : {{score}} / {{quiz.questions.length}}</p>
-            <button routerLink="/">Retour à l'accueil</button>
-            <button routerLink="/quiz-list">Rejouer à un quiz</button>
+            <p class="score">{{score}} / {{quiz.questions.length}}</p>
+            <hr>
+            <button routerLink="/" class="button endquiz">Retour à l'accueil</button>
+            <button routerLink="/quiz-list" class="button endquiz">Rejouer à un quiz</button>
         </div>
     </div>
 </div>
