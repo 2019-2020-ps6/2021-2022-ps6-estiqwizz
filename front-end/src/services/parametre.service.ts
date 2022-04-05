@@ -15,4 +15,8 @@ export class ParamService {
     return {parametre1: !this.isTextBig , parametre2: this.isTextBig};
   }
 
+  getBullshit() {
+    return {parametre1: false , parametre2: true};
+  }
+
 }
