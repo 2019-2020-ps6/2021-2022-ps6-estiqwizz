@@ -1,11 +1,18 @@
-<div style="display: flex; flex-direction: column; align-items: center;">
-    <button class="button quizbutton" (click)="selectQuiz()" routerLink="/play-quiz/{{quiz.id}}">
-        <h2>{{quiz.name}}</h2>
-    </button>
-    <span style="color:red">Temporaire :</span>
-    <div style="display: flex;">
-        <button class="button-card" (click)="delete()">Supprimer (Attention)</button>
-        <button class="button-card" routerLink="/edit-quiz/{{quiz.id}}">Modifier</button>
+<div>
+    <div *ngIf="!quiz.official" style="display: flex; flex-direction: column; align-items: center;">
+        <button class="button quizbutton community" (click)="selectQuiz()" routerLink="/play-quiz/{{quiz.id}}">
+            <h2>{{quiz.name}}</h2>
+        </button>
+        <span style="color:red">Temporaire :</span>
+        <div style="display: flex;">
+            <button class="button-card" (click)="delete()">Supprimer (Attention)</button>
+            <button class="button-card" routerLink="/edit-quiz/{{quiz.id}}">Modifier</button>
+        </div>
+    </div>
+    <div *ngIf="quiz.official" style="display: flex; flex-direction: column; align-items: center;">
+        <button class="button quizbutton official" (click)="selectQuiz()" routerLink="/play-quiz/{{quiz.id}}">
+            <h2>{{quiz.name}}</h2>
+        </button>
     </div>
 </div>
 
