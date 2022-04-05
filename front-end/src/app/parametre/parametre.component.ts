@@ -18,6 +18,8 @@ export class ParametreComponent {
   public sepForm: FormGroup;
   public daltForm: FormGroup;
 
+  public textBig = false;
+
   constructor(public formBuilder: FormBuilder) {
     this.daltForm = this.formBuilder.group({ choix: ['Normal'] });
     this.tailleForm = this.formBuilder.group({ choix: ['Normal'] });
@@ -25,6 +27,15 @@ export class ParametreComponent {
   }
 
   setDalto() {}
-  setTaille() {}
+
+  setTaille() {
+    const choixTaille = this.tailleForm.getRawValue();
+    console.log('clique a ete fait' , choixTaille);
+    this.textBig = choixTaille.choix !== 'Normal';
+  }
+
+  getTaille() {
+    return {parametre1: !this.textBig , parametre2: this.textBig};
+  }
   setSep() {}
 }
