@@ -27,7 +27,6 @@ export class PlayQuizComponent implements OnInit {
     this.quizService.setSelectedQuiz(id);
     this.nbQuestions = this.quiz.questions.length;
     console.log(this.nbQuestions);
-
   }
 
   suivant(isCorrect: boolean) {

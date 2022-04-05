@@ -107,3 +107,13 @@
 .answerbutton:hover {
     box-shadow: black 1px 0 20px;
 }
+
+.endquiz {
+    font-size: 0.8em*$text-size;
+    color: $light-blue;
+    border: $light-blue solid 3px;
+}
+
+.endquiz:hover{
+    background-color: $light-blue;
+}
