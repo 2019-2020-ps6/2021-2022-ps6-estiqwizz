@@ -1,2 +1,20 @@
 @import "../../../styles/button.scss";
 @import '../../../styles/card.scss';
+@import '../../../styles/variables.scss';
+
+.official {
+    border: 3px solid $light-blue;
+}
+
+.official:hover {
+    border: 3px solid $light-blue;
+}
+
+.community {
+    border: 3px solid black;
+    background-color: antiquewhite;
+}
+
+.community:hover {
+    border: 3px solid black;
+}
