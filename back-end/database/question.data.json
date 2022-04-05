@@ -43,5 +43,11 @@
     "label": "comment s'appelle la princesse que doit sauver mario",
     "quizId": 1648500180210,
     "id": 1648542177744
+  },
+  {
+    "label": "qui a gagné le dernier titre mvp",
+    "explanation": "en effet c'est curry qui a gagner",
+    "quizId": 1649144659303,
+    "id": 1649144815842
   }
 ]
