@@ -1,2 +1,2 @@
 
-export class ParamService{}
+export class ParamService {}
