@@ -38,13 +38,8 @@ hr {
 }
 
 .score {
-    margin: 10px;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    font-weight: bold;
-    font-size: 2em*$text-size;
+    margin: 30px;
 }

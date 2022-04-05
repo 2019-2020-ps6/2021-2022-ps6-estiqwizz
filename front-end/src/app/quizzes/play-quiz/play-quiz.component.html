@@ -17,10 +17,10 @@
             </div>
         </div>
         <div *ngIf="end">
-            <h3>Votre Score :</h3>
-            <p class="score">{{score}} / {{quiz.questions.length}}</p>
+            <h3>Vous avez répondu correctement à  :</h3>
+            <h1 class="score">{{score}} / {{quiz.questions.length}}</h1>
             <hr>
-            <button routerLink="/" class="button endquiz">Retour à l'accueil</button>
+            <button routerLink="/home" class="button endquiz">Retour à l'accueil</button>
             <button routerLink="/quiz-list" class="button endquiz">Rejouer à un quiz</button>
         </div>
     </div>
