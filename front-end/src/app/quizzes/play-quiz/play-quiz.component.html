@@ -23,7 +23,7 @@
                     <p class="goodAnswerBorder">{{quiz.questions[i].explanation}}</p>
                 </div>
                 <div *ngIf="!isCorrectCurrentQuestion" class="badAnswer">
-                    <h3>Mauvaise réponse...</h3>
+                    <h3>Mauvaise réponse... </h3>
                     <p class="badAnswerBorder">{{quiz.questions[i].explanation}}</p>
                 </div>
                 <button class="button nextButton" (click)="suivant()">
