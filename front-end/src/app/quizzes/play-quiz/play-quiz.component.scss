@@ -1,6 +1,7 @@
 @import '../../../styles/card.scss';
 @import '../../../styles/button.scss';
 @import '../../../styles/text.scss';
+@import '../../../styles/variables.scss';
 
 .contentquizpage {
     display: flex;
@@ -35,4 +36,26 @@ hr {
     display: block;
     margin-left: auto;
     margin-right: auto
+}
+
+.badAnswer {
+    color: $red;
+}
+
+.goodAnswer {
+    color: $green;
+}
+
+.badAnswerBorder {
+    padding: 1em;
+    border: solid 5px;
+    border-color: $red;
+    border-radius: 20px;
+}
+
+.goodAnswerBorder {
+    padding: 1em;
+    border: solid 5px;
+    border-color: $green;
+    border-radius: 20px;
 }
