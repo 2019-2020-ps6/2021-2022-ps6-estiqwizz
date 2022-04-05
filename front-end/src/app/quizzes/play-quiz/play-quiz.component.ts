@@ -18,6 +18,8 @@ export class PlayQuizComponent implements OnInit {
   public score = 0;
   public nbQuestions: number;
   public end = false;
+  public explanation = false;
+  public isCorrectCurrentQuestion = false;
 
   constructor(private route: ActivatedRoute, private quizService: QuizService, public paramService: ParamService) {
     this.quizService.quizSelected$.subscribe((quiz) => this.quiz = quiz);
@@ -30,9 +32,15 @@ export class PlayQuizComponent implements OnInit {
     console.log(this.nbQuestions);
   }
 
-  suivant(isCorrect: boolean) {
+  suivant() {
+    this.explanation = false;
     this.i++;
-    if (isCorrect) { this.score++; }
+    if (this.isCorrectCurrentQuestion) { this.score++; }
     if (this.i === this.quiz.questions.length) { this.end = true; }
+  }
+
+  displayExplanation(isCorrect: boolean) {
+    this.explanation = true;
+    this.isCorrectCurrentQuestion = isCorrect;
   }
 }

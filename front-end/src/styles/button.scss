@@ -37,6 +37,7 @@
     font-size: 2em*$text-size;
     color: $light-blue;
     border: $light-blue solid 3px;
+    width: 400px;
 }
 
 .create:hover{
@@ -47,9 +48,20 @@
     font-size: 1.5em*$text-size;
     color: $dark-blue;
     border: $dark-blue solid 3px;
+    width: 400px;
 }
   
 .setting:hover {
+    background-color: $dark-blue;
+}
+
+.home {
+    font-size: 1.5em*$text-size;
+    color: $dark-blue;
+    border: $dark-blue solid 3px;
+}
+  
+.home:hover {
     background-color: $dark-blue;
 }
 
@@ -57,6 +69,7 @@
     font-size: 1em*$text-size;
     color: #464646;
     border: #464646 solid 3px;
+    width: 400px;
 }
   
 .guide:hover {
@@ -76,15 +89,12 @@
     color: black;
     font-size: .8em*$text-size;
     border-radius: 10px;
-    border: $light-blue solid 3px;
     margin: 10px;
     width: 250px*$text-size;
 }
 
 .quizbutton:hover {
     color: black;
-    border-radius: 10px;
-    border: $light-blue solid 3px;
 }
 
 .ico {
@@ -106,6 +116,15 @@
 
 .answerbutton:hover {
     box-shadow: black 1px 0 20px;
+}
+
+.nextButton {
+    margin-top: 20px;
+    font-size: $text-size*1.4em;
+    background-color: $dark-blue;
+    color: white;
+    border: white solid 3px;
+    padding: 0.4em 0.65em;
 }
 
 .endquiz {

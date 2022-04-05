@@ -2,11 +2,18 @@
   {
     "name": "Culture gaming",
     "theme": "Jeux vidéo",
+    "official": true,
     "id": 1648500180210
+  },
+  {
+    "name": "Les animaux de la ferme",
+    "theme": "Animaux",
+    "id": 1649148554092
   },
   {
     "name": "basket",
     "theme": "sport",
+    "official": false,
     "id": 1649144659303
   }
 ]

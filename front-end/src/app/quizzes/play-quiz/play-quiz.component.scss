@@ -1,6 +1,7 @@
 @import '../../../styles/card.scss';
 @import '../../../styles/button.scss';
 @import '../../../styles/text.scss';
+@import '../../../styles/variables.scss';
 
 .contentquizpage {
     display: flex;
@@ -34,17 +35,39 @@ hr {
 .answerbutton {
     display: block;
     margin-left: auto;
-    margin-right: auto
+    margin-right: auto;
+}
+
+.badAnswer {
+    color: $red;
+}
+
+.goodAnswer {
+    color: $green;
+}
+
+.badAnswerBorder {
+    padding: 1em;
+    border: solid 5px;
+    border-color: $red;
+    border-radius: 20px;
+}
+
+.goodAnswerBorder {
+    padding: 1em;
+    border: solid 5px;
+    border-color: $green;
+    border-radius: 20px;
 }
 
 .score {
-    margin: 10px;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     width: 100%;
     font-weight: bold;
     font-size: 2em*$text-size;
 }
+
+    /*margin: 30px;  laisser suite a un merge, jspa si oui ou non il degage*/
+

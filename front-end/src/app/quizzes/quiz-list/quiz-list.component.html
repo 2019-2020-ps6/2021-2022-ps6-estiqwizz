@@ -11,7 +11,7 @@
         <div class="officialquiz" *ngFor="let quiz of quizList">
             <!--Inputs & Output allow communication between parent & child components.-->
             <!--More information: https://angular.io/guide/component-interaction-->
-            <app-quiz [quiz]="quiz" (quizSelected)="quizSelected($event)" (deleteQuiz)="deleteQuiz($event)" (editQuiz)="editQuiz($event)"></app-quiz>
+            <app-quiz *ngIf="quiz.official" [quiz]="quiz" (quizSelected)="quizSelected($event)" (deleteQuiz)="deleteQuiz($event)" (editQuiz)="editQuiz($event)"></app-quiz>
         </div>
         <hr style="color: white; border: none;">
         <h2>Les quiz de la communauté</h2>
@@ -19,7 +19,7 @@
         <div *ngFor="let quiz of quizList">
             <!--Inputs & Output allow communication between parent & child components.-->
             <!--More information: https://angular.io/guide/component-interaction-->
-            <app-quiz [quiz]="quiz" (quizSelected)="quizSelected($event)" (deleteQuiz)="deleteQuiz($event)" (editQuiz)="editQuiz($event)"></app-quiz>
+            <app-quiz *ngIf="quiz.official != true" [quiz]="quiz" (quizSelected)="quizSelected($event)" (deleteQuiz)="deleteQuiz($event)" (editQuiz)="editQuiz($event)"></app-quiz>
         </div>
     </div>
     <div>
