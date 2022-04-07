@@ -1,51 +1,62 @@
-<button class="button back" [routerLink]="['/home']">
-  <i class="fas fa-angle-left"></i>
-</button>
-<h1 id="paramTitre"><b>Parametre du Site</b></h1>
-<div>
-  <div class="parametre" [ngClass]="getTaille()">
-    <form class="quiz-form" [formGroup]="daltForm">
-      <label for="daltonisme">
-        <br> Daltonisme <br>
-        <select class="input-custom" id="daltonisme" [formControlName]="'choix'">
+
+<div style="display: inline-flex; align-items: center;">
+
+  <button class="button back" [routerLink]="['/home']">
+    <i class="fas fa-angle-left"></i>
+  </button>
+  
+  <h1>Parametre du site</h1>
+</div>
+
+
+<div class="parent">
+
+  <div [ngClass]="getTaille()" class="parametre">
+    <h3>Daltonisme</h3>
+    <form [formGroup]="daltForm">
+      <label>
+        <select id="daltonisme" [formControlName]="'choix'">
           <option *ngFor="let dalto of LIST_DALTO" [value]="dalto">
             {{dalto}}
           </option>
         </select>
       </label>
-      <br>
-      <button type="submit" class="button-card" (click)="setDalto()">Appliquer</button>
     </form>
+    <button type="submit" class="button submit" (click)="setDalto()">
+      <span><i class="fas fa-check ico"></i></span>
+      Appliquer</button>
   </div>
 
   <div class="parametre" [ngClass]="getTaille()">
-    <form class="quiz-form" [formGroup]="tailleForm">
-      <label for="taille">
-        <br> Taille d'écriture <br>
-        <select class="input-custom" id="taille" [formControlName]="'choix'">
+    <h3>Taille d'écriture</h3>
+    <form [formGroup]="tailleForm">
+      <label>
+        <select id="taille" [formControlName]="'choix'">
           <option *ngFor="let taille of LIST_ECRITURE" [value]="taille">
             {{taille}}
           </option>
         </select>
       </label>
-      <br>
-      <button type="submit" class="button-card" (click)="setTaille()">Appliquer</button>
     </form>
+    <button type="submit" class="button submit" (click)="setTaille()">
+      <span><i class="fas fa-check ico"></i></span>
+      Appliquer
+    </button>
   </div>
 
   <div class="parametre" [ngClass]="getTaille()">
-    <form class="quiz-form" [formGroup]="sepForm">
-      <label for="separation">
-        <br> Séparation des éléments <br>
-        <select class="input-custom" id="separation" [formControlName]="'choix'">
+    <h3>Séparation des éléments</h3>
+    <form [formGroup]="sepForm">
+      <label>
+        <select id="separation" [formControlName]="'choix'">
           <option *ngFor="let separation of LIST_SEPARATION" [value]="separation">
             {{separation}}
           </option>
         </select>
       </label>
-      <br>
-      <button type="submit" class="button-card" (click)="setSep()">Appliquer</button>
     </form>
+    <button type="submit" class="button submit" (click)="setSep()">
+      <span><i class="fas fa-check ico"></i></span>
+      Appliquer</button>
   </div>
-
 </div>

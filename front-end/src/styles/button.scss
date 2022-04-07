@@ -77,7 +77,6 @@
 }
 
 .back {
-    margin-top: 20px;
     font-size: $text-size*1.4em;
     background-color: $dark-blue;
     color: white;
@@ -135,4 +134,15 @@
 
 .endquiz:hover{
     background-color: $light-blue;
+}
+
+.submit {
+    border: 3px solid $light-blue;
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+.submit:hover {
+    color: $light-blue;
+    border: 3px solid $light-blue;
 }

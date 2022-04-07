@@ -1,10 +1,31 @@
-@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:wght@700&display=swap');
 @import "../../styles/button.scss";
 @import "../../styles/parametre.scss";
+@import "../../styles/variables.scss";
+@import "../../styles/text.scss";
+@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:wght@700&display=swap');
 
 .parametre {
-  padding: 0.5em 1.5em;
-  display: inline-block;
-  vertical-align: middle;
-  float: none;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  margin: 5px;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid $light-blue;
+}
+
+.parent {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+}
+
+select {
+  border: 2px solid black;
+  border-radius: 5px;
+  font-size: 1rem;
+  height: 30px;
+  width: 150px;
+  text-align: center;
 }
