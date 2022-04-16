@@ -7,6 +7,7 @@
 .contentquizpage {
     display: flex;
     flex-direction: row;
+    text-align:center
   }
 
 .game {
@@ -39,25 +40,15 @@ hr {
     margin-right: auto;
 }
 
-.badAnswer {
-    color: $red;
-}
-
-.goodAnswer {
-    color: $green;
-}
-
 .badAnswerBorder {
     padding: 1em;
     border: solid 5px;
-    border-color: $red;
     border-radius: 20px;
 }
 
 .goodAnswerBorder {
     padding: 1em;
     border: solid 5px;
-    border-color: $green;
     border-radius: 20px;
 }
 
@@ -67,7 +58,7 @@ hr {
     align-items: center;
     width: 100%;
     font-weight: bold;
-    font-size: 2em*$text-size;
+    font-size: 1em*$text-size;
 }
 
     /*margin: 30px;  laisser suite a un merge, jspa si oui ou non il degage*/

@@ -27,7 +27,11 @@ export class ParametreComponent {
     this.sepForm = this.formBuilder.group({ choix: ['Normal'] });
   }
 
-  setDalto() {}
+  setDalto() {
+    const choixDalto = this.daltForm.getRawValue();
+    this.paramService.setDalto(choixDalto.choix);
+    alert('vous avez choisie l\'option daltonisme : ' + choixDalto.choix);
+  }
 
   setTaille() {
     const choixTaille = this.tailleForm.getRawValue();
@@ -39,6 +43,6 @@ export class ParametreComponent {
   getTaille() {
     return this.paramService.getTaille();
   }
-  
+
   setSep() {}
 }

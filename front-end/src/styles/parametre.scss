@@ -1,7 +1,25 @@
+@import 'variables.scss';
+
 .parametre1 {
-  font-size: 2em;
+  font-size: 1em;
 }
 
 .parametre2 {
-  font-size: 3em;
+  font-size: 2em;
+}
+
+.badAnswer {
+  color: $red;
+}
+
+.goodAnswer {
+  color: $green;
+}
+
+.goodAnswerDeteranopie {
+  color: $light-blue;
+}
+
+.badAnswerDeteranopie {
+  color: $yellow;
 }
