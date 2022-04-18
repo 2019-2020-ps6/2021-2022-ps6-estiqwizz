@@ -18,11 +18,11 @@
                 </div>
             </div>
             <div *ngIf="explanation">
-                <div *ngIf="isCorrectCurrentQuestion" class="goodAnswer">
+                <div *ngIf="isCorrectCurrentQuestion" class = "goodAnswer" [ngClass]="paramService.getDaltoGood()">
                     <h3>Bonne réponse !</h3>
                     <p class="goodAnswerBorder">{{quiz.questions[i].explanation}}</p>
                 </div>
-                <div *ngIf="!isCorrectCurrentQuestion" class="badAnswer">
+                <div *ngIf="!isCorrectCurrentQuestion" class = "badAnswer" [ngClass]="paramService.getDaltoBad()">
                     <h3>Mauvaise réponse... </h3>
                     <p class="badAnswerBorder">{{quiz.questions[i].explanation}}</p>
                 </div>
@@ -36,7 +36,8 @@
         </div>
         <div *ngIf="end">
             <h3>Vous avez répondu correctement à  :</h3>
-            <h1 class="score">{{score}} / {{quiz.questions.length}}</h1>
+            <br>
+            <h2 class="score">{{score}} / {{quiz.questions.length}}</h2>
             <hr>
             <button routerLink="/home" class="button endquiz">Retour à l'accueil</button>
             <button routerLink="/quiz-list" class="button endquiz">Rejouer à un quiz</button>
