@@ -39,6 +39,6 @@ export class ParametreComponent {
   getTaille() {
     return this.paramService.getTaille();
   }
-  
+
   setSep() {}
 }

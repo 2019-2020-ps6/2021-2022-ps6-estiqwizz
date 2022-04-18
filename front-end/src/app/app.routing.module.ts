@@ -5,10 +5,11 @@ import { QuizListComponent } from './quizzes/quiz-list/quiz-list.component';
 import { EditQuizComponent } from './quizzes/edit-quiz/edit-quiz.component';
 import { HomeComponent } from './home/home.component';
 import { ParametreComponent } from './parametre/parametre.component';
-import { GuideListComponent } from './guide/guide-list/guide-list.component';
+import { GuideListComponent } from './guides/guide-list/guide-list.component';
 import { QuizFormComponent } from './quizzes/quiz-form/quiz-form.component';
 import { PlayQuizComponent } from './quizzes/play-quiz/play-quiz.component';
 import { ResultQuizComponent } from './quizzes/result-quiz/result-quiz.component';
+import { ShowGuideComponent } from './guides/show-guide/show-guide.component';
 
 const routes: Routes = [
     {path: 'quiz-list', component: QuizListComponent},
@@ -19,6 +20,7 @@ const routes: Routes = [
     {path: 'guide-list', component: GuideListComponent},
     {path: 'play-quiz/:id', component: PlayQuizComponent},
     {path: 'result-quiz/:id', component: ResultQuizComponent},
+    {path: 'guide/:id', component: ShowGuideComponent},
     {path: '**', redirectTo: 'home', pathMatch: 'full' },
 ];
 
@@ -27,5 +29,4 @@ const routes: Routes = [
     exports: [RouterModule]
 })
 export class AppRoutingModule {
-
 }

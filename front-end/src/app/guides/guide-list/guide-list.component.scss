@@ -1,0 +1,15 @@
+@import '../../../styles/card.scss';
+@import '../../../styles/button.scss';
+@import '../../../styles/text.scss';
+@import '../../../styles/variables.scss';
+@import '../../../styles/parametre.scss';
+
+.guide-list {
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }

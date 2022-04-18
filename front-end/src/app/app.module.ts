@@ -15,9 +15,11 @@ import { QuestionFormComponent } from './questions/question-form/question-form.c
 import { QuestionComponent } from './questions/question/question.component';
 import { HomeComponent } from './home/home.component';
 import { ParametreComponent } from './parametre/parametre.component';
-import { GuideListComponent } from './guide/guide-list/guide-list.component';
+import { GuideListComponent } from './guides/guide-list/guide-list.component';
+import { GuideComponent } from './guides/guide/guide.component';
 import { PlayQuizComponent } from './quizzes/play-quiz/play-quiz.component';
 import { ResultQuizComponent } from './quizzes/result-quiz/result-quiz.component';
+import { ShowGuideComponent } from './guides/show-guide/show-guide.component';
 
 
 @NgModule({
@@ -35,7 +37,9 @@ import { ResultQuizComponent } from './quizzes/result-quiz/result-quiz.component
     ParametreComponent,
     GuideListComponent,
     PlayQuizComponent,
-    ResultQuizComponent
+    ResultQuizComponent,
+    GuideComponent,
+    ShowGuideComponent
   ],
   imports: [
     BrowserModule,

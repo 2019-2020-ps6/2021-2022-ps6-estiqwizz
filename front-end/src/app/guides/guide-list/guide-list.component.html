@@ -1,0 +1,10 @@
+<div>
+    <button class="button back" [routerLink]="['/home']">
+        <i class="fas fa-angle-left"></i>
+    </button>
+</div>
+<div class="guide-list">
+    <div *ngFor="let guide of guideList">
+        <app-guide [guide]="guide" (guideSelected)="guideSelected($event)"></app-guide>
+    </div>
+</div>

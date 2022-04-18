@@ -1,0 +1,11 @@
+@import '../../../styles/card.scss';
+@import '../../../styles/button.scss';
+@import '../../../styles/text.scss';
+@import '../../../styles/variables.scss';
+@import '../../../styles/parametre.scss';
+
+.mainTitle{
+    font-size: 2em*$text-size;
+    text-align: center;
+    font-weight: bold;
+}
