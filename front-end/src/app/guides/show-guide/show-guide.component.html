@@ -8,4 +8,18 @@
     {{guide.title}}
 </div>
 
-{{guide.text}}
+<br>
+
+<table>
+    <div *ngFor="let step of guide.steps; let indexOfelement=index;">
+        <tr>
+            <td>Etape {{indexOfelement}}:</td>
+            <td>
+                {{step.text}}
+            </td>
+            <td>
+                <img src="{{step.link}}">
+            </td>
+        </tr>
+    </div>
+</table>
