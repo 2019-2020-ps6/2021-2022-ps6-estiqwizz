@@ -11,9 +11,9 @@ export class ParametreComponent implements OnInit {
 
   public LIST_DALTO: string[] = ['Normal', 'Deutéranopie', 'Protanopie', 'Tritanopie'];
 
-  public LIST_ECRITURE: string[] = ['Normal', 'Grand'];
+  public LIST_ECRITURE: string[] = ['Moyen', 'Grand'];
 
-  public LIST_SEPARATION: string[] = ['Normal', 'Grand'];
+  public LIST_SEPARATION: string[] = ['Moyen', 'Grand'];
 
   public tailleForm: FormGroup;
   public sepForm: FormGroup;
@@ -26,9 +26,9 @@ export class ParametreComponent implements OnInit {
       choix: [(this.paramService.typeDalto === undefined) ? 'Normal' : this.paramService.typeDalto]
     });
     this.tailleForm = this.formBuilder.group({
-      choix: [(this.paramService.typeTaille === undefined) ? 'Normal' : this.paramService.typeTaille]
+      choix: [(this.paramService.typeTaille === undefined) ? 'Moyen' : this.paramService.typeTaille]
     });
-    this.sepForm = this.formBuilder.group({ choix: ['Normal'] });
+    this.sepForm = this.formBuilder.group({ choix: ['Moyen'] });
   }
 
   ngOnInit() {
@@ -44,7 +44,7 @@ export class ParametreComponent implements OnInit {
   setTaille() {
     const choixTaille = this.tailleForm.getRawValue();
     console.log('clique a ete fait' , choixTaille);
-    this.textBig = choixTaille.choix !== 'Normal';
+    this.textBig = choixTaille.choix !== 'Moyen';
     this.paramService.setTaille(this.textBig);
   }
 
