@@ -8,3 +8,13 @@
     text-align: center;
     font-weight: bold;
 }
+
+table{
+    margin: auto;
+}
+
+tr, td {
+    border-bottom: 1px solid #ddd;
+    padding: 15px;
+    text-align: left;
+}
