@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import {FormGroup, FormBuilder} from '@angular/forms';
 import {ParamService} from '../../services/parametre.service';
 
@@ -7,7 +7,7 @@ import {ParamService} from '../../services/parametre.service';
   templateUrl: './parametre.component.html',
   styleUrls: ['./parametre.component.scss']
 })
-export class ParametreComponent {
+export class ParametreComponent implements OnInit {
 
   public LIST_DALTO: string[] = ['Normal', 'Deutéranopie', 'Protanopie', 'Tritanopie'];
 
@@ -22,9 +22,17 @@ export class ParametreComponent {
   public textBig = false;
 
   constructor(public formBuilder: FormBuilder, public paramService: ParamService) {
-    this.daltForm = this.formBuilder.group({ choix: ['Normal'] });
-    this.tailleForm = this.formBuilder.group({ choix: ['Normal'] });
+    this.daltForm = this.formBuilder.group({
+      choix: [(this.paramService.typeDalto === undefined) ? 'Normal' : this.paramService.typeDalto]
+    });
+    this.tailleForm = this.formBuilder.group({
+      choix: [(this.paramService.typeTaille === undefined) ? 'Normal' : this.paramService.typeTaille]
+    });
     this.sepForm = this.formBuilder.group({ choix: ['Normal'] });
+  }
+
+  ngOnInit() {
+    this.paramService.typeDalto = 'Normal';
   }
 
   setDalto() {

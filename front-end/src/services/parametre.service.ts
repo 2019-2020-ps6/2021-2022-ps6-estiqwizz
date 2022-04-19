@@ -12,7 +12,14 @@ export class ParamService {
 
   public typeDalto: string;
 
+  public typeTaille: string;
+
   setTaille(textBig: boolean) {
+    if (textBig) {
+      this.typeTaille = 'Grand';
+    } else {
+      this.typeTaille = 'Normal';
+    }
     this.isTextBig = textBig;
   }
 
