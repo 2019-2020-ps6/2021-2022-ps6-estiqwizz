@@ -1,5 +1,7 @@
+import { Step } from './step.model';
+
 export interface Guide {
     id: string;
     title: string;
-    text: string;
+    steps: Step[];
 }
