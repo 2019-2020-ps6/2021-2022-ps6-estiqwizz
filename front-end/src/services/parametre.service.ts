@@ -24,30 +24,28 @@ export class ParamService {
   getDaltoGood() {
     switch (this.typeDalto) {
       case 'Normal':
-        return {goodAnswer: !this.isDalto};
+        return {goodAnswerNormal: !this.isDalto};
       case 'Deutéranopie':
-        return {goodAnswer: !this.isDalto , goodAnswerDeteranopie: this.isDalto};
-      /*case 'Protanopie':
-        return {goodAnswer: !this.isDalto , goodAnswerDeteranopie: this.isDalto};
+      case 'Protanopie':
+        return {goodAnswer: !this.isDalto , goodAnswerDeuterProta: this.isDalto};
       case 'Tritanopie':
-        return {goodAnswer: !this.isDalto , goodAnswerDeteranopie: this.isDalto};*/
+        return {goodAnswer: !this.isDalto , goodAnswerTrita: this.isDalto};
     }
   }
 
   getDaltoBad() {
     switch (this.typeDalto) {
       case 'Normal':
-        return {badAnswer: !this.isDalto};
+        return {badAnswerNormal: !this.isDalto};
       case 'Deutéranopie':
-        return {badAnswer: !this.isDalto , badAnswerDeteranopie: this.isDalto};
-      /*case 'Protanopie':
-        return {badAnswer: !this.isDalto , badAnswerDeteranopie: this.isDalto};
+      case 'Protanopie':
+        return {badAnswer: !this.isDalto , badAnswerDeuterProta: this.isDalto};
       case 'Tritanopie':
-        return {badAnswer: !this.isDalto , badAnswerDeteranopie: this.isDalto};*/
+        return {badAnswer: !this.isDalto , badAnswerTrita: this.isDalto};
     }
   }
   getTaille() {
-    return {parametre1: !this.isTextBig , parametre2: this.isTextBig};
+    return {normalSize: !this.isTextBig , bigSize: this.isTextBig};
   }
 
   getBullshit() {

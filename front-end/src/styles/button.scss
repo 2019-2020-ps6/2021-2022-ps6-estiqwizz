@@ -16,7 +16,7 @@
     padding: 0.5em 1.5em;
     justify-content: center;
 }
-  
+
 .button:hover {
     border: white solid 3px;
     color: white;
@@ -24,9 +24,9 @@
 }
 
 .play {
-    font-size: 3em*$text-size;
     color: $light-blue;
     border: $light-blue solid 3px;
+    font-size: 2em;
 }
 
 .play:hover{
@@ -34,10 +34,9 @@
 }
 
 .create {
-    font-size: 2em*$text-size;
     color: $light-blue;
     border: $light-blue solid 3px;
-    width: 400px;
+    font-size: 2em;
 }
 
 .create:hover{
@@ -45,51 +44,60 @@
 }
 
 .setting {
-    font-size: 1.5em*$text-size;
     color: $dark-blue;
     border: $dark-blue solid 3px;
-    width: 400px;
+    font-size: 1em;
 }
-  
+
 .setting:hover {
     background-color: $dark-blue;
 }
 
+.settingheader {
+  color: $dark-blue;
+  border: $dark-blue solid 3px;
+  font-size: 1em;
+}
+
+.settingheader:hover {
+  background-color: $dark-blue;
+}
+
 .home {
-    font-size: 1.5em*$text-size;
     color: $dark-blue;
     border: $dark-blue solid 3px;
+    font-size: 1em;
 }
-  
+
 .home:hover {
     background-color: $dark-blue;
 }
 
 .guide {
-    font-size: 1em*$text-size;
     color: #464646;
     border: #464646 solid 3px;
-    width: 400px;
+    font-size: .85em;
 }
-  
+
 .guide:hover {
     background-color: #464646;
 }
 
 .back {
-    font-size: $text-size*1.4em;
     background-color: $dark-blue;
     color: white;
     border: white solid 3px;
     padding: 0.4em 0.65em;
+    font-size: 1.2em;
 }
 
 .quizbutton {
     color: black;
-    font-size: .8em*$text-size;
     border-radius: 10px;
     margin: 10px;
-    width: 250px*$text-size;
+    padding: 10px;
+    width: 250px;
+    font-size: 1em;
 }
 
 .quizbutton:hover {
@@ -103,14 +111,14 @@
 }
 
 .answerbutton {
-    height: 100px;
-    width: 300px;
+    min-height: 100px;
+    min-width: 300px;
     border: 3px solid $light-blue;
     background-color: $white;
-    font-size: 1em*$text-size;
     font-family: 'Inria Sans', sans-serif;
     cursor: pointer;
     transition: all .5s;
+    font-size: 1em;
 }
 
 .answerbutton:hover {
@@ -119,7 +127,6 @@
 
 .nextButton {
     margin-top: 20px;
-    font-size: $text-size*1.4em;
     background-color: $dark-blue;
     color: white;
     border: white solid 3px;
@@ -127,9 +134,9 @@
 }
 
 .endquiz {
-    font-size: 0.8em*$text-size;
     color: $light-blue;
     border: $light-blue solid 3px;
+    font-size: 1em;
 }
 
 .endquiz:hover{
@@ -138,7 +145,6 @@
 
 .submit {
     border: 3px solid $light-blue;
-    font-size: 1rem;
     margin-top: 10px;
 }
 

@@ -1,6 +1,7 @@
 @import "../../styles/variables";
 @import "../../styles/button";
 @import "../../styles/text";
+@import '../../styles/parametre.scss';
 
 
 .header {
@@ -8,13 +9,15 @@
   display: flex;
   box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12);
   justify-content: space-between;
-  padding: 15px;
+  height: 4em;
+  padding: 0 10px;
+  align-items: center;
 }
 
 .vertical {
-  border-left: 2px solid white;
-  border-radius: 1px;
-  height: 100%;
+  width: 2px;
+  background-color: white;
+  height: 3em;
   margin-inline: 10px;
 }
 
@@ -22,3 +25,4 @@
   display: flex;
   align-items: center;
 }
+

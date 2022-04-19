@@ -1,7 +1,7 @@
 <div>
     <div *ngIf="!quiz.official" style="display: flex; flex-direction: column; align-items: center;">
         <button class="button quizbutton community" (click)="selectQuiz()" routerLink="/play-quiz/{{quiz.id}}">
-            <h2>{{quiz.name}}</h2>
+            <span>{{quiz.name}}</span>
         </button>
         <span style="color:red">Temporaire :</span>
         <div style="display: flex;">
@@ -11,7 +11,7 @@
     </div>
     <div *ngIf="quiz.official" style="display: flex; flex-direction: column; align-items: center;">
         <button class="button quizbutton official" (click)="selectQuiz()" routerLink="/play-quiz/{{quiz.id}}">
-            <h2>{{quiz.name}}</h2>
+            <span>{{quiz.name}}</span>
         </button>
     </div>
 </div>

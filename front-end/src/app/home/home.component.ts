@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ParamService} from '../../services/parametre.service';
 
 @Component({
   selector: 'app-home',
@@ -6,4 +7,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
+
+  constructor(public paramService: ParamService) { }
 }

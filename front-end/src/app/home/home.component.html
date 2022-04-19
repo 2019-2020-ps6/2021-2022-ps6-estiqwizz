@@ -1,4 +1,4 @@
-<div class="menu">
+<div class="menu" [ngClass]="paramService.getTaille()">
     <div>
         <button class="button play" [routerLink]="['/quiz-list']">
             <span><i class="fas fa-play ico"></i></span>

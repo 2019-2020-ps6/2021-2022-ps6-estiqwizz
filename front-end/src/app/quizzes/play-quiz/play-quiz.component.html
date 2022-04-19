@@ -1,10 +1,10 @@
-<div class="contentquizpage">
+<div class="contentquizpage" [ngClass]="paramService.getTaille()">
     <div>
         <button class="button back" [routerLink]="['/quiz-list']">
             <i class="fas fa-angle-left"></i>
         </button>
     </div>
-    <div class="game" [ngClass]="paramService.getTaille()">
+    <div class="game">
         <div>
             <h2>Quiz : {{quiz.name}}</h2>
         </div>
@@ -26,21 +26,22 @@
                     <h3>Mauvaise réponse... </h3>
                     <p class="badAnswerBorder">{{quiz.questions[i].explanation}}</p>
                 </div>
-                <button class="button nextButton" (click)="suivant()">
-                    <span>
-                        <i class="fas fa-angle-right"></i>
-                    </span>
-                    <span>ㅤSuivant</span>
+              <div>
+                <button class="button back" (click)="suivant()">
+                  <span><i class="fas fa-angle-right ico"></i></span>
+                  <span>Suivant</span>
                 </button>
+              </div>
             </div>
         </div>
-        <div *ngIf="end">
-            <h3>Vous avez répondu correctement à  :</h3>
-            <br>
-            <h2 class="score">{{score}} / {{quiz.questions.length}}</h2>
-            <hr>
+        <div *ngIf="end" style="display: flex; flex-direction: column">
+            <h3>Vous avez répondu correctement à :</h3>
+            <h1 class="score">{{score}} / {{quiz.questions.length}}</h1>
+          <hr>
+          <div>
             <button routerLink="/home" class="button endquiz">Retour à l'accueil</button>
             <button routerLink="/quiz-list" class="button endquiz">Rejouer à un quiz</button>
+          </div>
         </div>
     </div>
 </div>

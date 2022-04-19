@@ -1,25 +1,35 @@
 @import 'variables.scss';
 
-.parametre1 {
+.normalSize {
   font-size: 1em;
+  transition: all .5s;
 }
 
-.parametre2 {
+.bigSize {
   font-size: 2em;
+  transition: all .5s;
 }
 
-.badAnswer {
-  color: $red;
-}
-
-.goodAnswer {
+.goodAnswerNormal {
   color: $green;
 }
 
-.goodAnswerDeteranopie {
+.badAnswerNormal {
+  color: $red;
+}
+
+.goodAnswerDeuterProta {
   color: $light-blue;
 }
 
-.badAnswerDeteranopie {
+.badAnswerDeuterProta {
   color: $yellow;
+}
+
+.goodAnswerTrita {
+  color: $light-cyan;
+}
+
+.badAnswerTrita {
+  color: $dark-red;
 }

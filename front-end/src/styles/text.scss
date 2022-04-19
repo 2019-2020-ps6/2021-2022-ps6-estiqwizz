@@ -3,31 +3,34 @@
 
 h1 {
     font-family: 'Inria Sans', sans-serif;
-    font-size: 3em*$text-size;
-    margin: 0px;
+    font-size: 2em;
 }
 
 h2 {
     font-family: 'Inria Sans', sans-serif;
-    font-size: 1.5em*$text-size;
-    margin: 20px*$text-size;
+    font-size: 1em;
 }
 
 h3 {
     font-family: 'Inria Sans', sans-serif;
-    font-size: 1em*$text-size;
     margin: 10px;
+    font-size: .9em;
+}
+
+span {
+  font-family: 'Inria Sans', sans-serif;
 }
 
 .title {
     transition: text-shadow 0.2s;
     color:white;
+    font-size: 2.3em;
 }
-  
+
 .title:hover {
     text-shadow: #000 1px 0 10px;
 }
-  
+
 .title:active {
     color: lightgray;
 }

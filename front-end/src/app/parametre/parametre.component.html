@@ -1,10 +1,10 @@
 
-<div style="display: inline-flex; align-items: center;">
+<div style="display: inline-flex; align-items: center;" [ngClass]="paramService.getTaille()">
 
   <button class="button back" [routerLink]="['/home']">
     <i class="fas fa-angle-left"></i>
   </button>
-  
+
   <h1>Parametre du site</h1>
 </div>
 
