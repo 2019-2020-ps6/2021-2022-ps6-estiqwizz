@@ -1,3 +1,7 @@
 @import "../../../styles/button.scss";
 @import '../../../styles/card.scss';
 @import '../../../styles/variables.scss';
+
+.create {
+    font-size: 1em*$text-size;
+}
