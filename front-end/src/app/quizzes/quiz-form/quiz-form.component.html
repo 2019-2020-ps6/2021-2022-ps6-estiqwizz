@@ -1,3 +1,9 @@
+<div>
+  <button class="button back" [routerLink]="['/home']">
+      <i class="fas fa-angle-left"></i>
+  </button>
+</div>
+
 <div class="card">
   <h2>Create a new Quiz</h2>
   <form class="quiz-form" [formGroup]="quizForm">
@@ -13,6 +19,15 @@
     <br>
     <button type="submit" class="button-card" (click)="addQuiz()">Create</button>
   </form>
+</div>
+
+
+<div class="quiz-list">
+  <div class="officialquiz" *ngFor="let quiz of quizList">
+      <!--Inputs & Output allow communication between parent & child components.-->
+      <!--More information: https://angular.io/guide/component-interaction-->
+      <app-quiz [quiz]="quiz" (quizSelected)="quizSelected($event)" (deleteQuiz)="deleteQuiz($event)" (editQuiz)="editQuiz($event)"></app-quiz>
+  </div>
 </div>
 <!-- Uncomment below to see your form structure and how it changes-->
 <!-- <br><br>{{quizForm.getRawValue() | json}} -->

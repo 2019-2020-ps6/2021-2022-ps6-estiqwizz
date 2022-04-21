@@ -1,6 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
 import { Quiz } from '../../../models/quiz.model';
 import {ParamService} from '../../../services/parametre.service';
+import { Router } from '@angular/router'
 
 @Component({
   selector: 'app-quiz',
@@ -21,7 +22,7 @@ export class QuizComponent implements OnInit {
   @Output()
   deleteQuiz: EventEmitter<Quiz> = new EventEmitter<Quiz>();
 
-  constructor(public paramService: ParamService) {
+  constructor(public paramService: ParamService, public router: Router) {
   }
 
   ngOnInit() {

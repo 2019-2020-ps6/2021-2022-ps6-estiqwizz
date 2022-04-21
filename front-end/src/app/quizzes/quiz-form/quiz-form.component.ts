@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
-
+import { Router } from '@angular/router';
 import { QuizService } from '../../../services/quiz.service';
 import { Quiz } from '../../../models/quiz.model';
 
@@ -19,11 +19,15 @@ export class QuizFormComponent implements OnInit {
    * More information about Reactive Forms: https://angular.io/guide/reactive-forms#step-1-creating-a-formgroup-instance
    */
   public quizForm: FormGroup;
+  public quizList: Quiz[] = [];
 
-  constructor(public formBuilder: FormBuilder, public quizService: QuizService) {
+  constructor(public formBuilder: FormBuilder, public quizService: QuizService, private router: Router) {
     this.quizForm = this.formBuilder.group({
       name: [''],
       theme: ['']
+    });
+    this.quizService.quizzes$.subscribe((quizzes: Quiz[]) => {
+      this.quizList = quizzes;
     });
     // You can also add validators to your inputs such as required, maxlength or even create your own validator!
     // More information: https://angular.io/guide/reactive-forms#simple-form-validation
@@ -38,6 +42,18 @@ export class QuizFormComponent implements OnInit {
     const quizToCreate: Quiz = this.quizForm.getRawValue() as Quiz;
 
     this.quizService.addQuiz(quizToCreate);
+  }
+
+  quizSelected(selected: boolean) {
+    console.log('event received from child:', selected);
+  }
+
+  editQuiz(quiz: Quiz) {
+    this.router.navigate(['/edit-quiz/' + quiz.name]);
+  }
+
+  deleteQuiz(quiz: Quiz) {
+    this.quizService.deleteQuiz(quiz);
   }
 
 }

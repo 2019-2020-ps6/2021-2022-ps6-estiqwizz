@@ -3,16 +3,15 @@
         <button class="button quizbutton community" (click)="selectQuiz()" routerLink="/play-quiz/{{quiz.id}}">
             <span>{{quiz.name}}</span>
         </button>
-        <span style="color:red">Temporaire :</span>
-        <div style="display: flex;">
-            <button class="button-card" (click)="delete()">Supprimer (Attention)</button>
-            <button class="button-card" routerLink="/edit-quiz/{{quiz.id}}">Modifier</button>
-        </div>
     </div>
     <div *ngIf="quiz.official" style="display: flex; flex-direction: column; align-items: center;">
         <button class="button quizbutton official" (click)="selectQuiz()" routerLink="/play-quiz/{{quiz.id}}">
             <span>{{quiz.name}}</span>
         </button>
     </div>
+</div>
+<div *ngIf="router.url === '/quiz-form'" style="display: flex;">
+    <button class="button-card" (click)="delete()">Supprimer (Attention)</button>
+    <button class="button-card" routerLink="/edit-quiz/{{quiz.id}}">Modifier</button>
 </div>
 
