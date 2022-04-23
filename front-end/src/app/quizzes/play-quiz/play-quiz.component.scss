@@ -24,6 +24,10 @@ hr {
     width: 100%;
 }
 
+button {
+    border-collapse: separate;
+}
+
 .questions {
     flex: 2 0 33%;
     margin: 5px;
@@ -38,6 +42,7 @@ hr {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    border-spacing: 2rem 3rem ;
 }
 
 .badAnswerBorder {

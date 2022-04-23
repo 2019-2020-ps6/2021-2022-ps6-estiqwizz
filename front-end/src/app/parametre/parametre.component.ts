@@ -20,6 +20,7 @@ export class ParametreComponent implements OnInit {
   public daltForm: FormGroup;
 
   public textBig = false;
+  public SepBig = false;
 
   constructor(public formBuilder: FormBuilder, public paramService: ParamService) {
     this.daltForm = this.formBuilder.group({
@@ -28,7 +29,9 @@ export class ParametreComponent implements OnInit {
     this.tailleForm = this.formBuilder.group({
       choix: [(this.paramService.typeTaille === undefined) ? 'Moyen' : this.paramService.typeTaille]
     });
-    this.sepForm = this.formBuilder.group({ choix: ['Moyen'] });
+    this.sepForm = this.formBuilder.group({
+      choix: [(this.paramService.typeSeparation === undefined) ? 'Moyen' : this.paramService.typeSeparation]
+    });
   }
 
   ngOnInit() {
@@ -52,5 +55,10 @@ export class ParametreComponent implements OnInit {
     return this.paramService.getTaille();
   }
 
-  setSep() {}
+  setSep() {
+    const choixSep = this.sepForm.getRawValue();
+    this.SepBig = choixSep.choix !== 'Moyen';
+    this.paramService.setSep(this.SepBig);
+    alert('vous avez choisie l\'option Separation : ' + choixSep.choix);
+  }
 }
