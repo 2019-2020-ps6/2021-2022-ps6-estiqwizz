@@ -6,41 +6,49 @@
   },
   {
     "label": "Comment s'appelle le frère de Mario, le célèbre héros de Nintendo ?",
+    "explanation": "Le frère de Mario s'appel Luigi",
     "quizId": 1648500180210,
     "id": 1648500422082
   },
   {
     "label": "De quel type d'animal est Sonic, le célèbre héros de Sega ?",
+    "explanation": "C'est un hérisson de couleur bleu",
     "quizId": 1648500180210,
     "id": 1648500449186
   },
   {
     "label": "Comment s'appelle le puissant héros de la licence God Of War ?",
+    "explanation": "Il s'appel Kratos",
     "quizId": 1648500180210,
     "id": 1648500512073
   },
   {
     "label": "Sous quel nom est connu le héros de la licence Halo ?",
+    "explanation": "Sous le nom de Master Chief",
     "quizId": 1648500180210,
     "id": 1648500542690
   },
   {
     "label": "Quelle est la particularité de Kirby, la petite boule rose ?",
+    "explanation": "Il peut tout avaler et prendre les capacitées de ce qu'il a avalé",
     "quizId": 1648500180210,
     "id": 1648500635754
   },
   {
     "label": "Si on vous dit : Franklin, Trevor, Michael, vous nous dites...",
+    "explanation": "GTA 5, bien évidemment",
     "quizId": 1648500180210,
     "id": 1648500657670
   },
   {
     "label": "quelle est le perso de street fighter se battant avec des griffes",
+    "explanation": "C'est Vega, le personnage obnubilé par sa beauté",
     "quizId": 1648500180210,
     "id": 1648541738099
   },
   {
     "label": "comment s'appelle la princesse que doit sauver mario",
+    "explanation": "C'est la princesse Peach",
     "quizId": 1648500180210,
     "id": 1648542177744
   },
