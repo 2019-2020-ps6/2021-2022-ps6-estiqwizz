@@ -16,10 +16,11 @@ export class PlayQuizComponent implements OnInit {
 
   public i = 0;
   public score = 0;
-  public nbQuestions: number;
   public end = false;
   public explanation = false;
   public isCorrectCurrentQuestion = false;
+  public currentPourcentageBonneReponse = 0;
+  public globalPourcentageBonneReponse = NaN;
 
   constructor(private route: ActivatedRoute, private quizService: QuizService, public paramService: ParamService) {
     this.quizService.quizSelected$.subscribe((quiz) => this.quiz = quiz);
@@ -28,15 +29,25 @@ export class PlayQuizComponent implements OnInit {
   ngOnInit() {
     const id = this.route.snapshot.paramMap.get('id');
     this.quizService.setSelectedQuiz(id);
-    this.nbQuestions = this.quiz.questions.length;
-    console.log(this.nbQuestions);
   }
 
   suivant() {
     this.explanation = false;
     this.i++;
     if (this.isCorrectCurrentQuestion) { this.score++; }
-    if (this.i === this.quiz.questions.length) { this.end = true; }
+    if (this.i === this.quiz.questions.length) {
+      const body =  {
+        globalGoodAnswer: this.quiz.globalGoodAnswer + this.score,
+        globalBadAnswer: this.quiz.globalBadAnswer + this.quiz.questions.length - this.score
+      };
+      this.quizService.updateQuiz(this.quiz, body);
+      this.currentPourcentageBonneReponse = Math.round(this.score / this.quiz.questions.length * 100);
+      const globalNbAnswers = this.quiz.globalGoodAnswer + this.quiz.globalBadAnswer;
+      if (globalNbAnswers > 0) {
+        this.globalPourcentageBonneReponse = Math.round(this.quiz.globalGoodAnswer / (globalNbAnswers) * 100);
+      }
+      this.end = true;
+    }
   }
 
   displayExplanation(isCorrect: boolean) {

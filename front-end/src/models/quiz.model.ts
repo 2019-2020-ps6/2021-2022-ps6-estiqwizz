@@ -6,4 +6,6 @@ export interface Quiz {
     theme?: string;
     official?: boolean;
     questions: Question[];
+    globalGoodAnswer: number;
+    globalBadAnswer: number;
 }

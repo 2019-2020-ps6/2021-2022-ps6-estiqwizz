@@ -37,7 +37,10 @@
         <div *ngIf="end" style="display: flex; flex-direction: column">
             <h3>Vous avez répondu correctement à :</h3>
             <h1 class="score">{{score}} / {{quiz.questions.length}}</h1>
-          <hr>
+            <hr>
+            <span>Vous avez correctement répondu à {{currentPourcentageBonneReponse}}% des questions de ce quiz.</span>
+            <span>En moyenne, les utilisateurs répondent correctement à {{globalPourcentageBonneReponse}}% des questions de ce quiz.</span>
+            <br>
           <div>
             <button routerLink="/home" class="button endquiz">Retour à l'accueil</button>
             <button routerLink="/quiz-list" class="button endquiz">Rejouer à un quiz</button>

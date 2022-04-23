@@ -5,6 +5,7 @@ import { Quiz } from '../models/quiz.model';
 import { QUIZ_LIST } from '../mocks/quiz-list.mock';
 import { Question } from '../models/question.model';
 import { serverUrl, httpOptionsBase } from '../configs/server.config';
+import { FormGroup } from '@angular/forms';
 
 @Injectable({
   providedIn: 'root'
@@ -71,5 +72,11 @@ export class QuizService {
   deleteQuestion(quiz: Quiz, question: Question) {
     const questionUrl = this.quizUrl + '/' + quiz.id + '/' + this.questionsPath + '/' + question.id;
     this.http.delete<Question>(questionUrl, this.httpOptions).subscribe(() => this.setSelectedQuiz(quiz.id));
+  }
+
+  updateQuiz(quiz: Quiz, body: any) {
+    const urlWithId = this.quizUrl + '/' + quiz.id;
+    console.log(urlWithId);
+    this.http.put<Quiz>(urlWithId, body, this.httpOptions).subscribe(() => this.setSelectedQuiz(quiz.id));
   }
 }
