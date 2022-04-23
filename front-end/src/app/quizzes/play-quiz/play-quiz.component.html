@@ -38,7 +38,8 @@
             <h3>Vous avez répondu correctement à :</h3>
             <h1 class="score">{{score}} / {{quiz.questions.length}}</h1>
             <hr>
-            <span>Vous avez correctement répondu à {{currentPourcentageBonneReponse}}% des questions de ce quiz.</span>
+            <span *ngIf="currentPourcentageBonneReponse >= globalPourcentageBonneReponse" [ngClass]="paramService.getDaltoGood()">Vous avez correctement répondu à  {{currentPourcentageBonneReponse}}% des questions de ce quiz.</span>
+            <span *ngIf="currentPourcentageBonneReponse < globalPourcentageBonneReponse" [ngClass]="paramService.getDaltoBad()">Vous avez correctement répondu à  {{currentPourcentageBonneReponse}}% des questions de ce quiz.</span>
             <span>En moyenne, les utilisateurs répondent correctement à {{globalPourcentageBonneReponse}}% des questions de ce quiz.</span>
             <br>
           <div>

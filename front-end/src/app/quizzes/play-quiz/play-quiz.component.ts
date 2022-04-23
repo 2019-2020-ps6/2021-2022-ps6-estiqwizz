@@ -20,7 +20,7 @@ export class PlayQuizComponent implements OnInit {
   public explanation = false;
   public isCorrectCurrentQuestion = false;
   public currentPourcentageBonneReponse = 0;
-  public globalPourcentageBonneReponse = NaN;
+  public globalPourcentageBonneReponse = 0;
 
   constructor(private route: ActivatedRoute, private quizService: QuizService, public paramService: ParamService) {
     this.quizService.quizSelected$.subscribe((quiz) => this.quiz = quiz);
