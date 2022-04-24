@@ -11,7 +11,7 @@
     "name": "Les animaux de la ferme",
     "theme": "Animaux",
     "id": 1649148554092,
-    "globalGoodAnswer": 13,
+    "globalGoodAnswer": 15,
     "globalBadAnswer": 1
   },
   {
@@ -21,5 +21,12 @@
     "id": 1649144659303,
     "globalGoodAnswer": 0,
     "globalBadAnswer": 0
+  },
+  {
+    "name": "Ceci est un quiz qui va tester les limites de l'affichage",
+    "theme": "Divers",
+    "globalBadAnswer": 0,
+    "globalGoodAnswer": 0,
+    "id": 1650811259647
   }
 ]

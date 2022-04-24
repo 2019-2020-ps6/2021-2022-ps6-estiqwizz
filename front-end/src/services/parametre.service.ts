@@ -34,27 +34,29 @@ export class ParamService {
 
   getDaltoGood() {
     switch (this.typeDalto) {
-      case 'Normal':
-        return {goodAnswerNormal: !this.isDalto};
       case 'Deutéranopie':
       case 'Protanopie':
-        return {goodAnswer: !this.isDalto , goodAnswerDeuterProta: this.isDalto};
+        return {goodAnswerNormal: !this.isDalto , goodAnswerDeuterProta: this.isDalto};
       case 'Tritanopie':
-        return {goodAnswer: !this.isDalto , goodAnswerTrita: this.isDalto};
+        return {goodAnswerNormal: !this.isDalto , goodAnswerTrita: this.isDalto};
+      default:
+        return {goodAnswerNormal: true};
     }
   }
 
   getDaltoBad() {
     switch (this.typeDalto) {
-      case 'Normal':
-        return {badAnswerNormal: !this.isDalto};
       case 'Deutéranopie':
       case 'Protanopie':
-        return {badAnswer: !this.isDalto , badAnswerDeuterProta: this.isDalto};
+        return {badAnswerNormal: !this.isDalto , badAnswerDeuterProta: this.isDalto};
       case 'Tritanopie':
-        return {badAnswer: !this.isDalto , badAnswerTrita: this.isDalto};
+        return {badAnswerNormal: !this.isDalto , badAnswerTrita: this.isDalto};
+      default:
+        //return {badAnswerNormal: !this.isDalto};
+        return {badAnswerNormal: true};
     }
   }
+
   getTaille() {
     return {normalSize: !this.isTextBig , bigSize: this.isTextBig};
   }

@@ -32,10 +32,11 @@ export class ParametreComponent implements OnInit {
     this.sepForm = this.formBuilder.group({
       choix: [(this.paramService.typeSeparation === undefined) ? 'Moyen' : this.paramService.typeSeparation]
     });
+    console.log(typeof this.paramService.typeDalto);
+    
   }
 
   ngOnInit() {
-    this.paramService.typeDalto = 'Normal';
   }
 
   setDalto() {

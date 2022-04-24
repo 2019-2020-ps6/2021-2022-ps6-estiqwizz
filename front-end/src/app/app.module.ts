@@ -20,6 +20,7 @@ import { GuideComponent } from './guides/guide/guide.component';
 import { PlayQuizComponent } from './quizzes/play-quiz/play-quiz.component';
 import { ResultQuizComponent } from './quizzes/result-quiz/result-quiz.component';
 import { ShowGuideComponent } from './guides/show-guide/show-guide.component';
+import { QuizThemeListComponent } from './quizzes/quiz-theme-list/quiz-theme-list.component';
 
 
 @NgModule({
@@ -39,7 +40,8 @@ import { ShowGuideComponent } from './guides/show-guide/show-guide.component';
     PlayQuizComponent,
     ResultQuizComponent,
     GuideComponent,
-    ShowGuideComponent
+    ShowGuideComponent,
+    QuizThemeListComponent
   ],
   imports: [
     BrowserModule,

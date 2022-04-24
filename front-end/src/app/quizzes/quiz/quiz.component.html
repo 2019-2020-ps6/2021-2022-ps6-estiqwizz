@@ -1,11 +1,11 @@
 <div>
     <div *ngIf="!quiz.official" style="display: flex; flex-direction: column; align-items: center;">
-        <button class="button quizbutton community" (click)="selectQuiz()" routerLink="/play-quiz/{{quiz.id}}">
+        <button class="button quizbutton community" (click)="selectQuiz()" routerLink="/play-quiz/{{quiz.id}}"  [ngClass]="paramService.getSep()">
             <span>{{quiz.name}}</span>
         </button>
     </div>
     <div *ngIf="quiz.official" style="display: flex; flex-direction: column; align-items: center;">
-        <button class="button quizbutton official" (click)="selectQuiz()" routerLink="/play-quiz/{{quiz.id}}">
+        <button class="button quizbutton official" (click)="selectQuiz()" routerLink="/play-quiz/{{quiz.id}}"  [ngClass]="paramService.getSep()">
             <span>{{quiz.name}}</span>
         </button>
     </div>

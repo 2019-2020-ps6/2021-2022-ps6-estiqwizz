@@ -1,0 +1,19 @@
+<!--<app-quiz-form></app-quiz-form>-->
+<div class="contentquizpage" [ngClass]="paramService.getTaille()">
+    <div>
+        <button class="button back" [routerLink]="['/home']">
+            <i class="fas fa-angle-left"></i>
+        </button>
+    </div>
+    <div class="quiz-list">
+        <h1>Themes page</h1>
+        <div *ngFor="let theme of themeList">
+            <span>{{theme}}</span>
+        </div>
+        <div class="officialquiz" *ngFor="let quiz of quizList">
+            <!--Inputs & Output allow communication between parent & child components.-->
+            <!--More information: https://angular.io/guide/component-interaction-->
+            <app-quiz [quiz]="quiz"></app-quiz>
+        </div>
+    </div>
+</div>

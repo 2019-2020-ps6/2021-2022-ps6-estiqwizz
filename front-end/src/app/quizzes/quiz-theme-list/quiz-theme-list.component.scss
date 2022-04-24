@@ -1,0 +1,22 @@
+@import '../../../styles/button.scss';
+@import '../../../styles/text.scss';
+@import "../../../styles/parametre";
+
+.quiz-list {
+  margin: 10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.contentquizpage {
+  display: flex;
+  flex-direction: row;
+}
+
+hr {
+  width: 100%;
+}

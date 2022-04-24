@@ -10,6 +10,7 @@ import { QuizFormComponent } from './quizzes/quiz-form/quiz-form.component';
 import { PlayQuizComponent } from './quizzes/play-quiz/play-quiz.component';
 import { ResultQuizComponent } from './quizzes/result-quiz/result-quiz.component';
 import { ShowGuideComponent } from './guides/show-guide/show-guide.component';
+import { QuizThemeListComponent } from './quizzes/quiz-theme-list/quiz-theme-list.component';
 
 const routes: Routes = [
     {path: 'quiz-list', component: QuizListComponent},
@@ -21,6 +22,7 @@ const routes: Routes = [
     {path: 'play-quiz/:id', component: PlayQuizComponent},
     {path: 'result-quiz/:id', component: ResultQuizComponent},
     {path: 'guide/:id', component: ShowGuideComponent},
+    {path: 'quiz-theme-list', component: QuizThemeListComponent},
     {path: '**', redirectTo: 'home', pathMatch: 'full' },
 ];
 

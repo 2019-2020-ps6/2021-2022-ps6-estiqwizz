@@ -14,15 +14,15 @@
             <hr>
             <div *ngIf="!explanation" class="questionsparent">
                 <div *ngFor="let answer of quiz.questions[i].answers" class="questions" [ngClass]="paramService.getSep()">
-                    <button class="answerbutton" (click)="displayExplanation(answer.isCorrect)">{{answer.value}}</button>
+                    <button class="answerbutton" (click)="displayExplanation(answer.isCorrect)" [ngClass]="paramService.getSep()">{{answer.value}}</button>
                 </div>
             </div>
             <div *ngIf="explanation">
-                <div *ngIf="isCorrectCurrentQuestion" class = "goodAnswer" [ngClass]="paramService.getDaltoGood()">
+                <div *ngIf="isCorrectCurrentQuestion" [ngClass]="paramService.getDaltoGood()">
                     <h3 [ngClass]="paramService.getSep()">Bonne réponse !</h3>
                     <p class="goodAnswerBorder" [ngClass]="paramService.getSep()">{{quiz.questions[i].explanation}}</p>
                 </div>
-                <div *ngIf="!isCorrectCurrentQuestion" class = "badAnswer" [ngClass]="paramService.getDaltoBad()">
+                <div *ngIf="!isCorrectCurrentQuestion" [ngClass]="paramService.getDaltoBad()">
                     <h3 [ngClass]="paramService.getSep()">Mauvaise réponse... </h3>
                     <p class="badAnswerBorder" [ngClass]="paramService.getSep()">{{quiz.questions[i].explanation}}</p>
                 </div>
