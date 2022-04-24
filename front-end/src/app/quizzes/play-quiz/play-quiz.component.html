@@ -10,24 +10,24 @@
         </div>
         <hr>
         <div *ngIf="!end" class="game">
-            <h3>{{quiz.questions[i].label}}</h3>
+            <h3 [ngClass]="paramService.getSep()">{{quiz.questions[i].label}}</h3>
             <hr>
             <div *ngIf="!explanation" class="questionsparent">
-                <div *ngFor="let answer of quiz.questions[i].answers" class="questions">
+                <div *ngFor="let answer of quiz.questions[i].answers" class="questions" [ngClass]="paramService.getSep()">
                     <button class="answerbutton" (click)="displayExplanation(answer.isCorrect)">{{answer.value}}</button>
                 </div>
             </div>
             <div *ngIf="explanation">
                 <div *ngIf="isCorrectCurrentQuestion" class = "goodAnswer" [ngClass]="paramService.getDaltoGood()">
-                    <h3>Bonne réponse !</h3>
-                    <p class="goodAnswerBorder">{{quiz.questions[i].explanation}}</p>
+                    <h3 [ngClass]="paramService.getSep()">Bonne réponse !</h3>
+                    <p class="goodAnswerBorder" [ngClass]="paramService.getSep()">{{quiz.questions[i].explanation}}</p>
                 </div>
                 <div *ngIf="!isCorrectCurrentQuestion" class = "badAnswer" [ngClass]="paramService.getDaltoBad()">
-                    <h3>Mauvaise réponse... </h3>
-                    <p class="badAnswerBorder">{{quiz.questions[i].explanation}}</p>
+                    <h3 [ngClass]="paramService.getSep()">Mauvaise réponse... </h3>
+                    <p class="badAnswerBorder" [ngClass]="paramService.getSep()">{{quiz.questions[i].explanation}}</p>
                 </div>
               <div>
-                <button class="button back" (click)="suivant()">
+                <button class="button back" (click)="suivant()" [ngClass]="paramService.getSep()">
                   <span><i class="fas fa-angle-right ico"></i></span>
                   <span>Suivant</span>
                 </button>
@@ -35,16 +35,16 @@
             </div>
         </div>
         <div *ngIf="end" style="display: flex; flex-direction: column">
-            <h3>Vous avez répondu correctement à :</h3>
+            <h3 [ngClass]="paramService.getSep()">Vous avez répondu correctement à :</h3>
             <h1 class="score">{{score}} / {{quiz.questions.length}}</h1>
-            <hr>
+            <hr [ngClass]="paramService.getSep()">
             <span *ngIf="currentPourcentageBonneReponse >= globalPourcentageBonneReponse" [ngClass]="paramService.getDaltoGood()">Vous avez correctement répondu à  {{currentPourcentageBonneReponse}}% des questions de ce quiz.</span>
             <span *ngIf="currentPourcentageBonneReponse < globalPourcentageBonneReponse" [ngClass]="paramService.getDaltoBad()">Vous avez correctement répondu à  {{currentPourcentageBonneReponse}}% des questions de ce quiz.</span>
             <span>En moyenne, les utilisateurs répondent correctement à {{globalPourcentageBonneReponse}}% des questions de ce quiz.</span>
             <br>
           <div>
-            <button routerLink="/home" class="button endquiz">Retour à l'accueil</button>
-            <button routerLink="/quiz-list" class="button endquiz">Rejouer à un quiz</button>
+            <button routerLink="/home" class="button endquiz" [ngClass]="paramService.getSep()">Retour à l'accueil</button>
+            <button routerLink="/quiz-list" class="button endquiz" [ngClass]="paramService.getSep()">Rejouer à un quiz</button>
           </div>
         </div>
     </div>

@@ -6,7 +6,7 @@
         </button>
     </div>
     <div class="quiz-list">
-        <h1>Les quiz officiels</h1>
+        <h1 [ngClass]="paramService.getSep()">Les quiz officiels</h1>
         <hr>
         <div class="officialquiz" *ngFor="let quiz of quizList">
             <!--Inputs & Output allow communication between parent & child components.-->
@@ -14,7 +14,7 @@
             <app-quiz *ngIf="quiz.official" [quiz]="quiz" (quizSelected)="quizSelected($event)" (deleteQuiz)="deleteQuiz($event)" (editQuiz)="editQuiz($event)"></app-quiz>
         </div>
         <hr style="color: white; border: none;">
-        <h1>Les quiz de la communauté</h1>
+        <h1 [ngClass]="paramService.getSep()">Les quiz de la communauté</h1>
         <hr>
         <div *ngFor="let quiz of quizList">
             <!--Inputs & Output allow communication between parent & child components.-->

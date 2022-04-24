@@ -36,8 +36,9 @@
 
 .normalSep {
   // cas de separation normal, surment rien qui change
+  margin: 5px 50px;
 }
 
 .bigSep {
-  // cas de grande separation, j'ai trouver ca si sa peut aider, pas reussi perso : https://developer.mozilla.org/fr/docs/Web/CSS/border-spacing
+  margin: 50px 150px;
 }

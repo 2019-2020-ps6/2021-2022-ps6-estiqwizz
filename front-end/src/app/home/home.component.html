@@ -1,25 +1,25 @@
 <div class="menu" [ngClass]="paramService.getTaille()">
     <div>
-        <button class="button play" [routerLink]="['/quiz-list']">
+        <button class="button play" [routerLink]="['/quiz-list']" [ngClass]="paramService.getSep()">
             <span><i class="fas fa-play ico"></i></span>
             <span>JOUER</span>
         </button>
     </div>
     <div>
-        <button class="button create" [routerLink]="['/quiz-form']">
+        <button class="button create" [routerLink]="['/quiz-form']" [ngClass]="paramService.getSep()">
             <span><i class="fas fa-plus ico"></i></span>
             <span>CRÉER</span>
         </button>
     </div>
     <hr>
     <div>
-        <button class="button setting" [routerLink]="['/parametre']">
+        <button class="button setting" [routerLink]="['/parametre']" [ngClass]="paramService.getSep()">
             <span><i class="fas fa-wrench ico"></i></span>
             <span>PARAMÈTRES</span>
         </button>
     </div>
     <div>
-        <button class="button guide" [routerLink]="['/guide-list']">
+        <button class="button guide" [routerLink]="['/guide-list']" [ngClass]="paramService.getSep()">
             <span><i class="fas fa-question ico"></i></span>
             <span>Guide d'utilisation</span>
         </button>
