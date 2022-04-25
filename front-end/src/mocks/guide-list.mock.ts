@@ -27,7 +27,7 @@ const s12: Step = {
 };
 
 const Steps1: Step[] = [s00, s01];
-const Steps2: Step[] = [s10,s11, s12];
+const Steps2: Step[] = [s10, s11, s12];
 const Steps3: Step[] = [];
 const Steps4: Step[] = [];
 const Steps5: Step[] = [];
