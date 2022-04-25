@@ -33,7 +33,6 @@ export class ParametreComponent implements OnInit {
       choix: [(this.paramService.typeSeparation === undefined) ? 'Moyen' : this.paramService.typeSeparation]
     });
     console.log(typeof this.paramService.typeDalto);
-    
   }
 
   ngOnInit() {
@@ -42,7 +41,7 @@ export class ParametreComponent implements OnInit {
   setDalto() {
     const choixDalto = this.daltForm.getRawValue();
     this.paramService.setDalto(choixDalto.choix);
-    alert('vous avez choisie l\'option daltonisme : ' + choixDalto.choix);
+    this.sendNotif();
   }
 
   setTaille() {
@@ -50,6 +49,7 @@ export class ParametreComponent implements OnInit {
     console.log('clique a ete fait' , choixTaille);
     this.textBig = choixTaille.choix !== 'Moyen';
     this.paramService.setTaille(this.textBig);
+    this.sendNotif();
   }
 
   getTaille() {
@@ -60,6 +60,18 @@ export class ParametreComponent implements OnInit {
     const choixSep = this.sepForm.getRawValue();
     this.SepBig = choixSep.choix !== 'Moyen';
     this.paramService.setSep(this.SepBig);
-    alert('vous avez choisie l\'option Separation : ' + choixSep.choix);
+    this.sendNotif();
+  }
+
+  sendNotif() {
+    const newDiv = document.createElement('div');
+    newDiv.className = 'notif';
+    const newContent = document.createTextNode('Parametre mis à jour !');
+    newDiv.appendChild(newContent);
+
+    const currentDiv = document.getElementById('top');
+    document.body.insertBefore(newDiv, currentDiv);
+
+    setTimeout(( ) => {document.body.removeChild(newDiv); }, 3000);
   }
 }

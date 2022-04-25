@@ -12,7 +12,7 @@ import { ParamService } from '../../../services/parametre.service';
 export class QuizThemeListComponent implements OnInit {
 
   public quizList: Quiz[] = [];
-  public themeList: String[] = [];
+  public themeList: string[] = [];
 
   constructor(private router: Router, public quizService: QuizService, public paramService: ParamService) {
     this.quizService.quizzes$.subscribe((quizzes: Quiz[]) => {
@@ -25,7 +25,7 @@ export class QuizThemeListComponent implements OnInit {
 
   ngOnInit() {
   }
-  
+
   ngOnChanges(quizList: Quiz[]) {
     this.themeList = this.getThemeList(this.quizList);
     console.log(this.themeList);
@@ -33,7 +33,7 @@ export class QuizThemeListComponent implements OnInit {
   }
 
   getThemeList(quizList: Quiz[]) {
-    const themeList: String[] = [];
+    const themeList: string[] = [];
     quizList.forEach(quiz => {
       if (!this.containsTheme(quiz.theme, themeList)) {
         themeList.push(quiz.theme);
@@ -42,8 +42,8 @@ export class QuizThemeListComponent implements OnInit {
     return themeList;
   }
 
-  containsTheme(theme: String, quizList: String[]) {
-    var i;
+  containsTheme(theme: string, quizList: string[]) {
+    let i: number;
     for (i = 0; i < quizList.length; i++) {
         if (quizList[i] === theme) {
             return true;

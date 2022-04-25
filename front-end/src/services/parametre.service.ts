@@ -52,7 +52,7 @@ export class ParamService {
       case 'Tritanopie':
         return {badAnswerNormal: !this.isDalto , badAnswerTrita: this.isDalto};
       default:
-        //return {badAnswerNormal: !this.isDalto};
+        // return {badAnswerNormal: !this.isDalto};
         return {badAnswerNormal: true};
     }
   }
