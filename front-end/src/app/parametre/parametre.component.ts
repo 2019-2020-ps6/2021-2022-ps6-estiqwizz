@@ -9,7 +9,7 @@ import {ParamService} from '../../services/parametre.service';
 })
 export class ParametreComponent implements OnInit {
 
-  public LIST_DALTO: string[] = ['Normal', 'Deutéranopie', 'Protanopie', 'Tritanopie'];
+  public LIST_DALTO: string[] = ['Défaut', 'Deutéranopie', 'Protanopie', 'Tritanopie'];
 
   public LIST_ECRITURE: string[] = ['Moyen', 'Grand'];
 
@@ -24,7 +24,7 @@ export class ParametreComponent implements OnInit {
 
   constructor(public formBuilder: FormBuilder, public paramService: ParamService) {
     this.daltForm = this.formBuilder.group({
-      choix: [(this.paramService.typeDalto === undefined) ? 'Normal' : this.paramService.typeDalto]
+      choix: [(this.paramService.typeDalto === undefined) ? 'Défaut' : this.paramService.typeDalto]
     });
     this.tailleForm = this.formBuilder.group({
       choix: [(this.paramService.typeTaille === undefined) ? 'Moyen' : this.paramService.typeTaille]

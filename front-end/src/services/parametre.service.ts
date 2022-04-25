@@ -10,7 +10,7 @@ export class ParamService {
 
   public isDalto = false;
 
-  public typeDalto = 'Normal';
+  public typeDalto = 'Défaut';
 
   public typeTaille: string;
 
