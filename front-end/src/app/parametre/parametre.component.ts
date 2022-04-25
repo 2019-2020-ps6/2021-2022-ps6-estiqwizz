@@ -66,11 +66,9 @@ export class ParametreComponent implements OnInit {
   sendNotif() {
     const newDiv = document.createElement('div');
     newDiv.className = 'notif';
-    const newContent = document.createTextNode('Parametre mis à jour !');
+    const newContent = document.createTextNode('Paramètre mis à jour !');
     newDiv.appendChild(newContent);
-
-    const currentDiv = document.getElementById('top');
-    document.body.insertBefore(newDiv, currentDiv);
+    document.body.appendChild(newDiv);
 
     setTimeout(( ) => {document.body.removeChild(newDiv); }, 3000);
   }
