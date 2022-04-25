@@ -18,15 +18,9 @@ export class QuizThemeListComponent implements OnInit {
     this.quizService.quizzes$.subscribe((quizzes: Quiz[]) => {
       this.quizList = quizzes;
     });
-    this.themeList = this.getThemeList(this.quizList);
-    console.log(this.themeList);
-    console.log(this.quizList);
   }
 
   ngOnInit() {
-  }
-
-  ngOnChanges(quizList: Quiz[]) {
     this.themeList = this.getThemeList(this.quizList);
     console.log(this.themeList);
     console.log(this.quizList);

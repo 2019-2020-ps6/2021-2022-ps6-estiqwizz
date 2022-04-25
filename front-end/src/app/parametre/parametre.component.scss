@@ -28,3 +28,28 @@ select {
   width: 150px;
   text-align: center;
 }
+
+.infos {
+  display: flex;
+  flex-direction: row;
+}
+
+.game {
+  margin: 10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.questionsparent {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+button {
+  border-collapse: separate;
+}

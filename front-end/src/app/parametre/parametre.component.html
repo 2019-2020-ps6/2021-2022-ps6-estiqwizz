@@ -8,54 +8,68 @@
     <h1>Parametre du site</h1>
   </div>
 </div>
-
-<div class="parent">
-  <div [ngClass]="getTaille()" class="parametre">
-    <h3>Daltonisme</h3>
-    <form [formGroup]="daltForm">
-      <label>
-        <select id="daltonisme" [formControlName]="'choix'">
-          <option *ngFor="let dalto of LIST_DALTO" [value]="dalto">
-            {{dalto}}
-          </option>
-        </select>
-      </label>
-    </form>
-    <button type="submit" class="button submit" (click)="setDalto()">
-      <span><i class="fas fa-check ico"></i></span>
-      Appliquer</button>
+<div class="infos">
+  <div class="parent">
+    <div [ngClass]="getTaille()" class="parametre">
+      <h3>Daltonisme</h3>
+      <form [formGroup]="daltForm">
+        <label>
+          <select id="daltonisme" [formControlName]="'choix'">
+            <option *ngFor="let dalto of LIST_DALTO" [value]="dalto">
+              {{dalto}}
+            </option>
+          </select>
+        </label>
+      </form>
+      <button type="submit" class="button submit" (click)="setDalto()">
+        <span><i class="fas fa-check ico"></i></span>
+        Appliquer</button>
+    </div>
+  
+    <div class="parametre" [ngClass]="getTaille()">
+      <h3>Taille d'écriture</h3>
+      <form [formGroup]="tailleForm">
+        <label>
+          <select id="taille" [formControlName]="'choix'">
+            <option *ngFor="let taille of LIST_ECRITURE" [value]="taille">
+              {{taille}}
+            </option>
+          </select>
+        </label>
+      </form>
+      <button type="submit" class="button submit" (click)="setTaille()">
+        <span><i class="fas fa-check ico"></i></span>
+        Appliquer
+      </button>
+    </div>
+  
+    <div class="parametre" [ngClass]="getTaille()">
+      <h3>Séparation des éléments</h3>
+      <form [formGroup]="sepForm">
+        <label>
+          <select id="separation" [formControlName]="'choix'">
+            <option *ngFor="let separation of LIST_SEPARATION" [value]="separation">
+              {{separation}}
+            </option>
+          </select>
+        </label>
+      </form>
+      <button type="submit" class="button submit" (click)="setSep()">
+        <span><i class="fas fa-check ico"></i></span>
+        Appliquer</button>
+    </div>
   </div>
-
-  <div class="parametre" [ngClass]="getTaille()">
-    <h3>Taille d'écriture</h3>
-    <form [formGroup]="tailleForm">
-      <label>
-        <select id="taille" [formControlName]="'choix'">
-          <option *ngFor="let taille of LIST_ECRITURE" [value]="taille">
-            {{taille}}
-          </option>
-        </select>
-      </label>
-    </form>
-    <button type="submit" class="button submit" (click)="setTaille()">
-      <span><i class="fas fa-check ico"></i></span>
-      Appliquer
-    </button>
-  </div>
-
-  <div class="parametre" [ngClass]="getTaille()">
-    <h3>Séparation des éléments</h3>
-    <form [formGroup]="sepForm">
-      <label>
-        <select id="separation" [formControlName]="'choix'">
-          <option *ngFor="let separation of LIST_SEPARATION" [value]="separation">
-            {{separation}}
-          </option>
-        </select>
-      </label>
-    </form>
-    <button type="submit" class="button submit" (click)="setSep()">
-      <span><i class="fas fa-check ico"></i></span>
-      Appliquer</button>
+  <div id="visualisation" class="game" [ngClass]="paramService.getSep()">
+    <div class="questionsparent"  [ngClass]="paramService.getTaille()">
+        <span [ngClass]="paramService.getDaltoGood()">Couleur positive</span>
+        <span>ㅤ|ㅤ</span>
+        <span [ngClass]="paramService.getDaltoBad()">Couleur négative</span>
+    </div>
+    <div class="questionsparent" [ngClass]="paramService.getTaille()">
+      <button class="answerbutton" [ngClass]="paramService.getSep()">Ceci est un test button de prévisualisation !</button>
+      <button class="answerbutton" [ngClass]="paramService.getSep()">Ceci est un test button de prévisualisation !</button>
+      <button class="answerbutton" [ngClass]="paramService.getSep()">Ceci est un test button de prévisualisation !</button>
+      <button class="answerbutton" [ngClass]="paramService.getSep()">Ceci est un test button de prévisualisation !</button>
+    </div>
   </div>
 </div>
