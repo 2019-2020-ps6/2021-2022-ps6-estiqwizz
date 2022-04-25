@@ -2,17 +2,32 @@ import { Guide } from '../models/guide.model';
 import { Step } from '../models/step.model';
 
 const s00: Step = {
-    text: 'Cliquer sur le bouton \"Paramètre\" en haut à droite de votre écran',
+    text: 'Cliquer sur le bouton \"Paramètre\" en haut à droite de votre écran.',
     link: '../../../assets/pictures/param.png'
 };
 
 const s01: Step = {
-    text: 'Cliquer sur la boite de sélection à coté du paramètre \"Taille d\'écriture\"',
+    text: 'Cliquer sur la boite de sélection à coté du paramètre \"Taille d\'écriture\".',
     link: '../../../assets/pictures/tailleParam.png'
 };
 
+const s10: Step = {
+    text: 'Cliquer sur ce bouton en haut à gauche de l\'écran.',
+    link: '../../../assets/pictures/home.png'
+};
+
+const s11: Step = {
+    text: 'Cliquer sur le bouton au centre de l\'écran \"JOUER\".',
+    link: '../../../assets/pictures/jouer.png'
+};
+
+const s12: Step = {
+    text: 'Cliquer sur un des quiz présent sur la page. Par exemple ici \"Culture gaming\".',
+    link: '../../../assets/pictures/quiz_exemple.png'
+};
+
 const Steps1: Step[] = [s00, s01];
-const Steps2: Step[] = [];
+const Steps2: Step[] = [s10,s11, s12];
 const Steps3: Step[] = [];
 const Steps4: Step[] = [];
 const Steps5: Step[] = [];

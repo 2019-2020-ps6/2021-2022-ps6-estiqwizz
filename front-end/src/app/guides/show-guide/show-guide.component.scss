@@ -11,10 +11,21 @@
 
 table{
     margin: auto;
+    border: 1px;
 }
 
 tr, td {
-    border-bottom: 1px solid #ddd;
     padding: 15px;
-    text-align: left;
+    text-align :center;
+}
+
+.line {
+    border-bottom: 1px solid #ddd;
+    align-items: center;
+}
+
+.image{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }

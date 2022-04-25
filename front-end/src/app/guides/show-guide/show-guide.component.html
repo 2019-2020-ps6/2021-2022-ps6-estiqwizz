@@ -11,14 +11,15 @@
 <br>
 
 <table>
-    <div *ngFor="let step of guide.steps; let indexOfelement=index;">
+    <div *ngFor="let step of guide.steps; let indexOfelement=index;" class = "line">
         <tr>
-            <td>Etape {{indexOfelement + 1}}:</td>
             <td>
-                {{step.text}}
+                Etape {{indexOfelement + 1}}: {{step.text}}
             </td>
-            <td>
-                <img src="{{step.link}}">
+        </tr>
+        <tr>
+            <td >
+                <img src="{{step.link}}" class="image">
             </td>
         </tr>
     </div>
