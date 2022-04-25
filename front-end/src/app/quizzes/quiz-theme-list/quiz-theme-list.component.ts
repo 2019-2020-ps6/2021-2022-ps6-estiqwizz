@@ -26,11 +26,12 @@ export class QuizThemeListComponent implements OnInit {
   ngOnInit() {
   }
 
+  /*
   ngOnChanges(quizList: Quiz[]) {
     this.themeList = this.getThemeList(this.quizList);
     console.log(this.themeList);
     console.log(this.quizList);
-  }
+  }*/
 
   getThemeList(quizList: Quiz[]) {
     const themeList: string[] = [];
