@@ -19,19 +19,19 @@ export class StartConfigComponent implements OnInit {
     setClas() {
         this.paramService.setSep(false);
         this.paramService.setTaille(false);
-        this.paramService.setDalto("Défaut");
+        this.paramService.setDalto('Défaut');
         this.navigate();
     }
 
     setDmla() {
         this.paramService.setTaille(false);
-        this.paramService.setDalto("Défaut");
+        this.paramService.setDalto('Défaut');
         this.paramService.setSep(true);
         this.navigate();
     }
 
     setPres() {
-        this.paramService.setDalto("Défaut");
+        this.paramService.setDalto('Défaut');
         this.paramService.setTaille(true);
         this.paramService.setSep(false);
         this.navigate();
@@ -40,7 +40,7 @@ export class StartConfigComponent implements OnInit {
     setDalt() {
         this.paramService.setSep(false);
         this.paramService.setTaille(false);
-        this.paramService.setDalto("Deutéranopie");
+        this.paramService.setDalto('Deutéranopie');
         this.navigate();
     }
 
