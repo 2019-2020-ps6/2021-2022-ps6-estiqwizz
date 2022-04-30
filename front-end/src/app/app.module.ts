@@ -21,6 +21,7 @@ import { PlayQuizComponent } from './quizzes/play-quiz/play-quiz.component';
 import { ResultQuizComponent } from './quizzes/result-quiz/result-quiz.component';
 import { ShowGuideComponent } from './guides/show-guide/show-guide.component';
 import { QuizThemeListComponent } from './quizzes/quiz-theme-list/quiz-theme-list.component';
+import { StartConfigComponent } from './startConfig/startConfig.component';
 
 
 @NgModule({
@@ -41,7 +42,8 @@ import { QuizThemeListComponent } from './quizzes/quiz-theme-list/quiz-theme-lis
     ResultQuizComponent,
     GuideComponent,
     ShowGuideComponent,
-    QuizThemeListComponent
+    QuizThemeListComponent,
+    StartConfigComponent
   ],
   imports: [
     BrowserModule,
