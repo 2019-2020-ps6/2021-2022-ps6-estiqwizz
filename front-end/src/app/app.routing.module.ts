@@ -12,6 +12,7 @@ import { ResultQuizComponent } from './quizzes/result-quiz/result-quiz.component
 import { ShowGuideComponent } from './guides/show-guide/show-guide.component';
 import { QuizThemeListComponent } from './quizzes/quiz-theme-list/quiz-theme-list.component';
 import { StartConfigComponent } from './startConfig/startConfig.component';
+import { DaltoChoiceComponent } from './daltoChoice/daltoChoice.component';
 
 const routes: Routes = [
     {path: 'quiz-list', component: QuizListComponent},
@@ -25,6 +26,7 @@ const routes: Routes = [
     {path: 'guide/:id', component: ShowGuideComponent},
     {path: 'quiz-theme-list', component: QuizThemeListComponent},
     {path: 'start-config', component: StartConfigComponent},
+    {path: 'dalto', component: DaltoChoiceComponent},
     {path: '**', redirectTo: 'start-config', pathMatch: 'full' },
 ];
 
