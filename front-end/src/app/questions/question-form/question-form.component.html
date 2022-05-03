@@ -3,12 +3,12 @@
   <form class="quiz-form" [formGroup]="questionForm">
     <label for="label">
       Title <br>
-      <input class="input-custom" type="text" id="label" [formControlName]="'label'">
+      <input class="input-custom" type="text" id="label" maxlength="100" [formControlName]="'label'">
     </label>
     <br>
     <label for="explanation">
       Explication de reponse <br>
-      <textarea class="input-custom" id="explanation" [formControlName]="'explanation'"> Explication ... </textarea>
+      <textarea class="input-custom" id="explanation" maxlength="200" [formControlName]="'explanation'"> Explication ... </textarea>
     </label>
     <br>
     <button class="button-card" (click)="addAnswer()">Add Answer</button>
@@ -17,7 +17,7 @@
         <div class="answer-form" [formGroupName]="i">
           <label>
             Answer
-            <input type="text" [formControlName]="'value'">
+            <input type="text" maxlength="30" [formControlName]="'value'">
             <br>
             Correct
             <input type="checkbox" [formControlName]="'isCorrect'">
