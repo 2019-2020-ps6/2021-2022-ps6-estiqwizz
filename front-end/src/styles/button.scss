@@ -114,6 +114,7 @@
 .answerbutton {
     min-height: 100px;
     min-width: 300px;
+    max-width: 40vw;
     border: 3px solid $light-blue;
     background-color: $white;
     font-family: 'Inria Sans', sans-serif;

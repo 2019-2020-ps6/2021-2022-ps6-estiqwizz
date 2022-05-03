@@ -60,10 +60,10 @@
     </div>
   </div>
   <div id="visualisation" class="game" [ngClass]="paramService.getSep()">
-    <div class="questionsparent"  [ngClass]="paramService.getTaille()">
-        <span [ngClass]="paramService.getDaltoGood()" style="transition: all 0.5s;">Couleur positive</span>
+    <div class="daltoPrevu" [ngClass]="paramService.getTaille()">
+        <span [ngClass]="paramService.getDaltoGood()">Couleur positive</span>
         <span>ㅤ|ㅤ</span>
-        <span [ngClass]="paramService.getDaltoBad()" style="transition: all 0.5s;">Couleur négative</span>
+        <span [ngClass]="paramService.getDaltoBad()">Couleur négative</span>
     </div>
     <div class="questionsparent" [ngClass]="paramService.getTaille()">
       <button class="answerbutton" [ngClass]="paramService.getSep()">Ceci est un test button de prévisualisation</button>

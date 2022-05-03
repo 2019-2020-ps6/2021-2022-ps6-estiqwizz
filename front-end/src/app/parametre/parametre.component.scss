@@ -48,8 +48,16 @@ select {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  column-gap: 17vw;
 }
 
 button {
   border-collapse: separate;
+}
+
+
+.daltoPrevu {
+  transition: all 0.5s;
+  font-size: 50px;
+  margin-inline: 10px;
 }
