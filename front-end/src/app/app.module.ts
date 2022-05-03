@@ -21,8 +21,9 @@ import { PlayQuizComponent } from './quizzes/play-quiz/play-quiz.component';
 import { ResultQuizComponent } from './quizzes/result-quiz/result-quiz.component';
 import { ShowGuideComponent } from './guides/show-guide/show-guide.component';
 import { QuizThemeListComponent } from './quizzes/quiz-theme-list/quiz-theme-list.component';
-import { StartConfigComponent } from './startConfig/startConfig.component';
+import { StartConfigComponent } from './configs/startConfig/startConfig.component';
 import { DaltoChoiceComponent } from './daltoChoice/daltoChoice.component';
+import { ConfigElementComponent } from './configs/config-element/config-element.component';
 
 
 @NgModule({
@@ -45,7 +46,8 @@ import { DaltoChoiceComponent } from './daltoChoice/daltoChoice.component';
     ShowGuideComponent,
     QuizThemeListComponent,
     StartConfigComponent,
-    DaltoChoiceComponent
+    DaltoChoiceComponent,
+    ConfigElementComponent
   ],
   imports: [
     BrowserModule,

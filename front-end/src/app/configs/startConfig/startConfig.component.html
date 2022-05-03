@@ -1,0 +1,10 @@
+<div class="param">
+    <div class="title">
+        Choisissez votre interface :
+    </div>
+    <br><br>
+    <div class="configs"> 
+        <app-config-element *ngFor="let config of configList" [config]="config"></app-config-element>
+    </div>
+</div>
+

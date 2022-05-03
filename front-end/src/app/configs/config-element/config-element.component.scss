@@ -1,0 +1,37 @@
+
+.item{
+    border: white solid 3px;
+    display: inline-block; 
+    *display: inline;
+    vertical-align: top; 
+    text-align: center;
+    font-size: 40px;
+    width: 15%;
+    margin: 2%;
+}
+
+.title{
+    display: inline-block; 
+    *display: inline;
+    vertical-align: top; 
+    text-align: center;
+    font-size: 50px;
+    width: 60%;
+    font-weight: bold;
+}
+
+img{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+span{
+    display: inline-block;
+}
+
+.item:hover {
+    border: white solid 3px;
+    color: rgb(29, 66, 32);
+    font-weight: bold;
+    box-shadow: black 1px 0 20px;
+}
