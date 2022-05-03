@@ -36,10 +36,11 @@
 
 .normalSep {
   // cas de separation normal, surment rien qui change
-  margin: 5px 50px;
+  margin: 5px 25px;
 }
 
 .bigSep {
-  margin: 50px 150px;
+  margin: 50px 50px;
   line-height: 1.8;
+  max-width: 100%;
 }
