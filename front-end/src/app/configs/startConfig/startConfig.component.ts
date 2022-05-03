@@ -17,5 +17,5 @@ export class StartConfigComponent implements OnInit {
     constructor(private route: Router, public paramService: ParamService ) { }
 
     ngOnInit() { }
-    
+
 }
