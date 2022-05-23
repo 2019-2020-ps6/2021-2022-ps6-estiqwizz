@@ -29,3 +29,39 @@ tr, td {
     margin-left: auto;
     margin-right: auto;
 }
+
+$size: 20px;
+
+.nothingToShow {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	align-content: center;
+	text-align: center;
+	font-weight: normal;
+	width: 100%;
+    height: fit-content;
+	text-align: center;
+    line-height: 160px;
+	font-size: 7vw;
+	background: linear-gradient(
+		-45deg, 
+		#0d34e4 25%, 
+		#0099ff 25%, 
+		#0099ff 50%, 
+		#0d34e4 50%, 
+		#0d34e4 75%, 
+		#0099ff 75%, 
+		#0099ff);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-size: $size $size;
+	background-position: 0 0;
+	animation: stripes 3s linear infinite;
+}	
+
+@keyframes stripes {
+	100% { 
+		background-position: $size 0, $size 0, $size 0;
+	}
+}

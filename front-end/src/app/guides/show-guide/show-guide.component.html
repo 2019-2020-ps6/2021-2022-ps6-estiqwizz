@@ -4,23 +4,32 @@
     </button>
 </div>
 
-<div class="mainTitle">
-    {{guide.title}}
-</div>
 
-<br>
 
-<table>
-    <div *ngFor="let step of guide.steps; let indexOfelement=index;" class = "line">
-        <tr>
-            <td>
-                Etape {{indexOfelement + 1}}: {{step.text}}
-            </td>
-        </tr>
-        <tr>
-            <td >
-                <img src="{{step.link}}" class="image">
-            </td>
-        </tr>
+<div *ngIf="guide.steps.length != 0;else nothing">
+    <div class="mainTitle">
+        {{guide.title}}
     </div>
-</table>
+    
+    <br>
+    
+    <table>
+        <div *ngFor="let step of guide.steps; let indexOfelement=index;" class = "line">
+            <tr>
+                <td>
+                    Etape {{indexOfelement + 1}}: {{step.text}}
+                </td>
+            </tr>
+            <tr>
+                <td >
+                    <img src="{{step.link}}" class="image">
+                </td>
+            </tr>
+        </div>
+    </table>
+</div>
+<ng-template #nothing>
+    <div  class="nothingToShow">
+        Le contenu de ce guide n'est pas encore disponible ...
+    </div>
+</ng-template>
