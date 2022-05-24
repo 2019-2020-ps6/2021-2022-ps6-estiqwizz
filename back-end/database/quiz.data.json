@@ -20,7 +20,7 @@
     "official": false,
     "id": 1649144659303,
     "globalGoodAnswer": 0,
-    "globalBadAnswer": 0
+    "globalBadAnswer": 2
   },
   {
     "name": "Ceci est un quiz qui va tester les limites de l'affichage",
@@ -32,8 +32,8 @@
   {
     "name": "La pêche",
     "theme": "Nature",
-    "globalBadAnswer": 6,
-    "globalGoodAnswer": 12,
+    "globalBadAnswer": 7,
+    "globalGoodAnswer": 13,
     "id": 1650910160725
   }
 ]

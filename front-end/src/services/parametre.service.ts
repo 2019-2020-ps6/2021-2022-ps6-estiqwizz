@@ -12,17 +12,17 @@ export class ParamService {
 
   public typeDalto = 'Défaut';
 
-  public typeTaille: string;
+  public typeTaille = 'Moyen';
 
   public isSepGrand = false;
 
-  public typeSeparation: string;
+  public typeSeparation = 'Moyen';
 
   setTaille(textBig: boolean) {
     if (textBig) {
       this.typeTaille = 'Grand';
     } else {
-      this.typeTaille = 'Normal';
+      this.typeTaille = 'Moyen';
     }
     this.isTextBig = textBig;
   }
@@ -69,7 +69,7 @@ export class ParamService {
     if (isSep) {
       this.typeSeparation = 'Grand';
     } else {
-      this.typeSeparation = 'Normal';
+      this.typeSeparation = 'Moyen';
     }
     this.isSepGrand = isSep;
   }
