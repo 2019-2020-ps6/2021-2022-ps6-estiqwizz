@@ -53,18 +53,6 @@
     "id": 1648542177744
   },
   {
-    "label": "canard",
-    "explanation": "oui c'est un canrad",
-    "quizId": 1649148554092,
-    "id": 1649148576517
-  },
-  {
-    "label": "vache",
-    "explanation": "azeazeaze",
-    "quizId": 1649148554092,
-    "id": 1649148593789
-  },
-  {
     "label": "qui a gagné le dernier titre mvp",
     "explanation": "en effet c'est curry qui a gagner",
     "quizId": 1649144659303,
@@ -99,5 +87,11 @@
     "explanation": "oenrôindgibdnfgôbndsf^gbndfogbd^bgiebjgjbgjbkhgpioudshgfijjqhzefjnqzefoihqeiufhiqpbsdfipbsdihshdfpqbsdgfpbzigpbqsdipgbqsipdbgsipdbgsqipbgsipbgipsdbgqispdgbpidsbgiqsbgipsdbgipsqdbgpisdbifgsdgpbipbiosud",
     "quizId": 1650952999891,
     "id": 1651562013970
+  },
+  {
+    "label": "Quel est couleur caractéristique d'un canard male ?",
+    "explanation": "Les canards mâles sont caractérisés par leur cou vert",
+    "quizId": 1649148554092,
+    "id": 1653384679782
   }
 ]
